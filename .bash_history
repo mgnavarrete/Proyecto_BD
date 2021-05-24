@@ -90,3 +90,21 @@ git remote -v
 git pull origin master
 ls
 git pull origin master
+git remote -v
+git pull origin master
+git checkout master
+git branches
+git --help
+git branch
+git add .
+git commit -m "initial commit"
+mgnavarrete@uc.cl
+git config --global user.email mgnavarete@uc.cl
+git config --global user.name menta
+git commit -m "initial commit"
+git push origin master
+ls
+git pull origin master
+ls
+tree
+ls
