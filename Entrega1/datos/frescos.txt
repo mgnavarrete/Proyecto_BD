@@ -1,0 +1,10 @@
+manzana,manzana roja
+tomate,tomate de rancagua
+lechuga,lechuga verde del sur
+melon,melon verde
+frutilla,frutillas de campo
+sandia,sandia sin pepas
+pera,pera verde    
+durazno,durazno peludo
+pepino,pepinos grandes
+zapallo,mitad del zapallo

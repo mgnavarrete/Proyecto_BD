@@ -1,0 +1,10 @@
+merluza congelada,pesacdo fresco
+salmon congelado,pesacdo fresco
+hamburgesa,hamburgesa de carne con 5% de grasa
+pizza congelada,pizza de peperoni con cebolla
+hamburgesa de soya,hambuergesa 100% natural
+nuggets,nuggets de pollo para el horno
+helado,helado de frutilla y chocolate
+hielo,hielo de agua purificada
+pan,marraqueta congelada
+carne molida,carne de vacuno 7% de grasa

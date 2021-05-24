@@ -1,0 +1,41 @@
+id_producto,nombre,precio,descripcion
+0,sillon,14090,sillon de cuero para 5 personas
+1,televisor,21634,pantalla de luz
+2,guitarra,13963,guitarra acustica de 12 cuerdas
+3,mochila,13495,mochila de acampar
+4,silla,23614,silla de escritorio gamer
+5,espejo,28733,espejo para baño
+6,iPhone,10938,iphone 12 de 34 gb
+7,computador,28341,computador gamer de con tarjeta grafica 1080x
+8,mouse,11064,mouse inalambrico
+9,cuchillo,26812,cuchillo de cocina
+10,merluza congelada,20982,pesacdo fresco
+11,salmon congelado,9741,pesacdo fresco
+12,hamburgesa,28213,hamburgesa de carne con 5% de grasa
+13,pizza congelada,45686,pizza de peperoni con cebolla
+14,hamburgesa de soya,46532,hambuergesa 100% natural
+15,nuggets,23787,nuggets de pollo para el horno
+16,helado,30207,helado de frutilla y chocolate
+17,hielo,26316,hielo de agua purificada
+18,pan,31187,marraqueta congelada
+19,carne molida,20343,carne de vacuno 7% de grasa
+20,manzana,45871,manzana roja
+21,tomate,40800,tomate de rancagua
+22,lechuga,25734,lechuga verde del sur
+23,melon,43698,melon verde
+24,frutilla,1230,frutillas de campo
+25,sandia,18924,sandia sin pepas
+26,pera,8763,pera verde    
+27,durazno,7942,durazno peludo
+28,pepino,48646,pepinos grandes
+29,zapallo,11745,mitad del zapallo
+30,grananzos,30019,grabanzos cocidos wasil
+31,durazno en conserva,32286,sin azucar y conservados en stevia
+32,porotos negros,16787,porotos cocidos marca wazil
+33,frutillas en conserva,11318,frutilla picadas y conservada en azucar
+34,atun en lata,11970,atun ahumado en aceite
+35,protos rojos,10029,porotos cocidos wazil
+36,choclos en conserva,19328,choclos pequeños
+37,choritos en lata,27875,choritos conservados en aceite
+38,salmon en lata,35977,salmon ahumado conservado en agua
+39,pepinillos,41583,pepinillos dulces

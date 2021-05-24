@@ -1,0 +1,10 @@
+sillon,sillon de cuero para 5 personas
+televisor,pantalla de luz
+guitarra,guitarra acustica de 12 cuerdas
+mochila,mochila de acampar
+silla,silla de escritorio gamer
+espejo,espejo para baño
+iPhone,iphone 12 de 34 gb
+computador,computador gamer de con tarjeta grafica 1080x
+mouse,mouse inalambrico
+cuchillo,cuchillo de cocina
