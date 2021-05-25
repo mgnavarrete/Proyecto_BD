@@ -12,7 +12,7 @@
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$edades = $result -> fetchAll();
-	$total = sizeof($edades)
+	$total = sizeof($edades);
 	if ($total == 0){
 		echo "<h2 align="center"> No hay trabajadores en esta comuna </h2";
 	}
