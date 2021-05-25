@@ -1,8 +1,22 @@
 <?php include('templates/header.html');   ?>
 
 <body>
-  <h1 align="center">Biblioteca Pokemón </h1>
-  <p style="text-align:center;">Aquí podrás encontrar información sobre pokemones.</p>
+  <h1 align="center">Buscador de Tiendas y Productos </h1>
+  <p style="text-align:center;">Acá podras encontrar toda la infromación de tiendas y sus productos disponibles</p>
+
+  <br>
+
+  <h3 align="center"> Ver Despacho de Tiendas</h3>
+
+  <form align="center" action="consultas/consulta_tiendas_despacho.php" method="post">
+    <input type="submit" value="Buscar">
+  </form>
+  
+  <br>
+  <br>
+  <br>
+
+
 
   <br>
 
