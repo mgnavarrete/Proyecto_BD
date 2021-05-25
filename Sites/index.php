@@ -17,7 +17,6 @@
   <br>
 
 
-
   <br>
 
   <h3 align="center"> ¿Quieres buscar un Pokemón por tipo y/o nombre?</h3>
