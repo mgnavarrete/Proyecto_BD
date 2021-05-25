@@ -37,6 +37,34 @@
   <br>
   <br>
 
+  <h3 align="center">¿Quieres buscar la tienda que tenga algún tipo de producto?</h3>
+
+  
+
+  <form align="center" action="consultas/consulta_tienda_pro_tipo.php" method="post">
+    Seleccinar un tipo:
+    <select name="tipo">
+      <?php
+      #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
+      $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
+      foreach ($tipo_producto as $key => $value) {
+        echo "<option value=$key>$key</option>";
+      }
+      ?>
+    </select>
+    <br><br>
+    <input type="submit" value="Buscar por tipo">
+  </form>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
   <h3 align="center"> ¿Quieres calcular la edad promedio de trabajadores de alguna comuna?</h3>
 
 <form align="center" action="consultas/consulta_edad_promedio.php" method="post">
@@ -49,11 +77,11 @@
 </form>
 
   <br>
-    <br>
+  <br>
   <br>
 
 
-  <h3 align="center">¿Quieres buscar la tienda que tenga algun tipo de producto?</h3>
+  <h3 align="center">¿Quieres buscar la tienda en donde se haya comprado más de ese tipo de producto?</h3>
 
   
 
