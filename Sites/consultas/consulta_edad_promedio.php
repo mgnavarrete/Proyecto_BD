@@ -12,6 +12,7 @@
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$edades = $result -> fetchAll();
+	print_r($edades)
 	$total = sizeof($edades);
 	$promedio = array_sum($edades) / sizeof($edades);
 	if ($total == 0){
@@ -19,8 +20,6 @@
 	}
 
 	else{
-	
-
 	echo "<h2> La edad promedio de los trabajadores de $comuna es: $promedio </h2";
 	}
  ?>
