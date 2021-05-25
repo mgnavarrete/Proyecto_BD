@@ -7,6 +7,7 @@
   $tipo_producto = array("No comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
   $key = $_POST["tipo"];
   $producto = $tipo_producto[$key];
+  print_r($producto)
   $query = "";
   $result = $db -> prepare($query);
   $result -> execute();
