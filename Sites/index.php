@@ -62,7 +62,7 @@
     <select name="tipo">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
-      $tipo_producto = array("No comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
+      $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
       foreach ($tipo_producto as $key => $value) {
         echo "<option value=$key>$key</option>";
       }
