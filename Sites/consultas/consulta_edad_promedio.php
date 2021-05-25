@@ -2,6 +2,8 @@
 
 <body>
 <h1 align="center">Promedio de edad de los trabajadores </h1>
+
+
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
@@ -12,7 +14,7 @@
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$edades = $result -> fetchAll();
-	print_r($edades)
+	print_r($edades);
 	$total = sizeof($edades);
 	$promedio = array_sum($edades) / sizeof($edades);
 	if ($total == 0){
