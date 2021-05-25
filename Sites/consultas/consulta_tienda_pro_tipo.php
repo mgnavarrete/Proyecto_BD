@@ -4,7 +4,7 @@
 <h1 align="center">Disponibilidad de tipo de productos </h1>
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  $tipo_producto = array("No comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
+  $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
   $key = $_POST["tipo"];
   $producto = $tipo_producto[$key];
   print_r($key);
