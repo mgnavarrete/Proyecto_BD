@@ -6,12 +6,14 @@
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
 
- 	$query = "SELECT id_tienda, comuna_despacho FROM tiendas_despacho;";
+ 	$query = "SELECT * FROM tiendas_despacho;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$tiendas = $result -> fetchAll();
-  ?>
 
+    print_r($tiendas)
+  ?>
+    
 	<table>
     <tr>
       <th>Nombre</th>

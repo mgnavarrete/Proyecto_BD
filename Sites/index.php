@@ -9,7 +9,7 @@
   <h3 align="center"> Ver Despacho de Tiendas</h3>
 
   <form align="center" action="consultas/consulta_tiendas_despacho.php" method="post">
-    <input type="submit" value="Buscar">
+    <input type="submit" value="Ver">
   </form>
   
   <br>
