@@ -8,7 +8,7 @@
 
 	$comuna = $_POST["comuna"];
 
- 	$query = "";
+ 	$query = "SELECT personal.edad FROM tiendas, personal, direcciones WHERE personal.id_tienda = tiendas.id_tienda AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna LIKE '%$comuna%;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$edades = $result -> fetchAll();
