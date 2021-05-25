@@ -2,6 +2,8 @@
 
 <body>
 
+<h1 align="center">Jefes en la comuna </h1>
+
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
@@ -14,7 +16,7 @@
 	$jefes = $result -> fetchAll();
   ?>
 
-	<table>
+	<table align="center">
     <tr>
     <th>ID</th>
       <th>Jefe</th>

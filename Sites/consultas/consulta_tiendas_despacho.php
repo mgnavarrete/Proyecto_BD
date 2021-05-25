@@ -2,6 +2,9 @@
 
 <body>
 
+<h1 align="center">Comunas donde despachan las tiendas </h1>
+
+
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
@@ -13,7 +16,7 @@
 
   ?>
     
-	<table>
+	<table align="center">
     <tr>
       <th>Nombre</th>
       <th>Comuna</th>
