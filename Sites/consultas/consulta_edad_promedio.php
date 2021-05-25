@@ -8,26 +8,13 @@
 
 	$comuna = $_POST["comuna"];
 
- 	$query = "SELECT tiendas.id_jefe, personal.nombre FROM tiendas, personal, direcciones WHERE personal.id_personal = tiendas.id_jefe AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna = "%comuna%";";
+ 	$query = "";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$edades = $result -> fetchAll();
+	$promedio = array_sum($edades) / sizeof($edades);
 
-
-
-
-  ?>
-
-	<table>
-    <tr>
-    <th>ID</th>
-      <th>Jefe</th>
-    </tr>
-  <?php
-	foreach ($jefes as $jefe) {
-  		echo "<tr> <td>$jefe[0]</td> <td>$jefe[1]</td></tr>";
-	}
-  ?>
-	</table>
+	echo "La edad promedio de los trabajadores de $comuna es: $promedio"
+ ?>
 
 <?php include('../templates/footer.html'); ?>

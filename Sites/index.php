@@ -1,6 +1,10 @@
 <?php include('templates/header.html');   ?>
 
 <body>
+
+
+
+
   <h1 align="center">Buscador de Tiendas y Productos </h1>
   <p style="text-align:center;">Acá podras encontrar toda la infromación de tiendas y sus productos disponibles</p>
 
@@ -25,7 +29,6 @@
     Comuna:
     <input type="text" name="comuna">
     <br/>
-    Nombre:
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
@@ -40,7 +43,7 @@
   Comuna:
   <input type="text" name="comuna">
   <br/>
-  Nombre:
+
   <br/><br/>
   <input type="submit" value="Calcular">
 </form>
