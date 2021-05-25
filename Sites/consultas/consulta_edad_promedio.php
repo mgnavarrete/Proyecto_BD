@@ -13,12 +13,13 @@
 	$result -> execute();
 	$edades = $result -> fetchAll();
 	$total = sizeof($edades);
+	$promedio = array_sum($edades) / sizeof($edades);
 	if ($total == 0){
 		echo "<h2> No hay trabajadores en esta comuna </h2";
 	}
 
 	else{
-	$promedio = array_sum($edades) / sizeof($edades);
+	
 
 	echo "<h2> La edad promedio de los trabajadores de $comuna es: $promedio </h2";
 	}
