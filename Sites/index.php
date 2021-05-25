@@ -34,6 +34,22 @@
   <br>
   <br>
 
+  <h3 align="center"> ¿Quieres calcular la edad promedio de trabajadores de alguna comuna?</h3>
+
+<form align="center" action="consultas/consulta_edad_promedio.php" method="post">
+  Comuna:
+  <input type="text" name="comuna">
+  <br/>
+  Nombre:
+  <br/><br/>
+  <input type="submit" value="Calcular">
+</form>
+
+  <br>
+    <br>
+  <br>
+
+
   <h3 align="center"> ¿Quieres buscar un Pokemón por su ID?</h3>
 
   <form align="center" action="consultas/consulta_stats.php" method="post">

@@ -1,2 +1,3 @@
 SELECT tiendas.nombre, tiendas_despacho.comuna_despacho FROM tiendas, tiendas_despacho WHERE tiendas.id_tienda = tiendas_despacho.id_tienda;
 
+SELECT tiendas.id_jefe, personal.nombre FROM tiendas, personal, direcciones WHERE personal.id_personal = tiendas.id_jefe AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna = "buin";
