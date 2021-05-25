@@ -19,14 +19,13 @@
 
   <br>
 
-  <h3 align="center"> ¿Quieres buscar un Pokemón por tipo y/o nombre?</h3>
+  <h3 align="center"> ¿Quieres buscar los jefes por comuna?</h3>
 
-  <form align="center" action="consultas/consulta_tipo_nombre.php" method="post">
-    Tipo:
-    <input type="text" name="tipo_elegido">
+  <form align="center" action="consultas/consulta_jefe_comuna.php" method="post">
+    Comuna:
+    <input type="text" name="comuna">
     <br/>
     Nombre:
-    <input type="text" name="nombre_pokemon">
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
