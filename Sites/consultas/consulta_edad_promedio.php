@@ -14,11 +14,14 @@
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$edades = $result -> fetchAll();
-	print_r($edades);
 	$total = sizeof($edades);
-	print_r($total);
-	print_r($comuna);
-	$promedio = array_sum($edades) / sizeof($edades);
+	$sum_edades = 0;
+	foreach ($edades as $edad) {
+		$sum_edades += $edad[0]
+	}
+
+
+	$promedio = $sum_edades/ sizeof($edades);
 	if ($total == 0){
 		echo "<h2> No hay trabajadores en esta comuna </h2";
 	}
