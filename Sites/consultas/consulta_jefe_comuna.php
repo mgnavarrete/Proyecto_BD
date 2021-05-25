@@ -8,7 +8,7 @@
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
 
-	$comuna = $_POST["comuna"];
+	$comuna = strtolower($_POST["comuna"]);
 
  	$query = "SELECT tiendas.id_jefe, personal.nombre FROM tiendas, personal, direcciones WHERE personal.id_personal = tiendas.id_jefe AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna LIKE '%$comuna%';";
 	$result = $db -> prepare($query);

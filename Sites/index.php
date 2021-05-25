@@ -64,7 +64,7 @@
   <h3 align="center"> ¿Quieres buscar por descripción a los usuarios que comprar el producto?</h3>
 
 <form align="center" action="consultas/consulta_descripcion.php" method="post">
-  Comuna:
+  Descripcion:
   <input type="text" name="descripcion">
   <br/>
 
