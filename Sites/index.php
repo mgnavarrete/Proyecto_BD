@@ -61,8 +61,20 @@
   <br>
   <br>
 
+  <h3 align="center"> ¿Quieres buscar por descripción a los usuarios que comprar el producto?</h3>
 
+<form align="center" action="consultas/consulta_descripcion.php" method="post">
+  Comuna:
+  <input type="text" name="descripcion">
+  <br/>
 
+  <br/><br/>
+  <input type="submit" value="Buscar">
+</form>
+
+  <br>
+  <br>
+  <br>
 
 
   <h3 align="center"> ¿Quieres calcular la edad promedio de trabajadores de alguna comuna?</h3>
@@ -81,11 +93,9 @@
   <br>
 
 
-  <h3 align="center">¿Quieres buscar la tienda en donde se haya comprado más de ese tipo de producto?</h3>
+  <h3 align="center">¿Quieres buscar las tiendas en donde se haya comprado más de ese tipo de producto?</h3>
 
-  
-
-  <form align="center" action="consultas/consulta_tienda_pro_tipo.php" method="post">
+  <form align="center" action="consultas/consulta_tienda_tipo_mayor.php" method="post">
     Seleccinar un tipo:
     <select name="tipo">
       <?php
