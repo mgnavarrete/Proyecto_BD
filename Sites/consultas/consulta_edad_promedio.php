@@ -17,7 +17,7 @@
 	$total = sizeof($edades);
 	$sum_edades = 0;
 	foreach ($edades as $edad) {
-		$sum_edades += $edad[0]
+		$sum_edades += $edad[0];
 	}
 
 
