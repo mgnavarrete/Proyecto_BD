@@ -1,62 +1,79 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title> CONSULTA DE DATOS </title>
-</head>
+<?php include('templates/header.html');   ?>
 
 <body>
-<h1>
-    Consulta de Datos
-</h1>
-<p>Estoy probando como consultar datos!</p>
-</body>
+  <h1 align="center">Biblioteca Pokemón </h1>
+  <p style="text-align:center;">Aquí podrás encontrar información sobre pokemones.</p>
 
+  <br>
 
+  <h3 align="center"> ¿Quieres buscar un Pokemón por tipo y/o nombre?</h3>
 
-<table>
-    <tr>
-        <td>Tiendas</td>
-        <td>Id</td>
-    </tr>
+  <form align="center" action="consultas/consulta_tipo_nombre.php" method="post">
+    Tipo:
+    <input type="text" name="tipo_elegido">
+    <br/>
+    Nombre:
+    <input type="text" name="nombre_pokemon">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+  
+  <br>
+  <br>
+  <br>
 
-    <tr>
-        <td>GameStop</td>
-        <td>1</td>
-    </tr>
+  <h3 align="center"> ¿Quieres buscar un Pokemón por su ID?</h3>
 
-</table>
+  <form align="center" action="consultas/consulta_stats.php" method="post">
+    Id:
+    <input type="text" name="id_elegido">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+  
+  <br>
+  <br>
+  <br>
 
-<?php
+  <h3 align="center"> ¿Quieres conocer los Pokemones más altos que: ?</h3>
 
-# Variable
-$var = 10;
-$boolean = true;
-$msj = "Wena Menta";
+  <form align="center" action="consultas/consulta_altura.php" method="post">
+    Altura Mínima:
+    <input type="text" name="altura">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+  <br>
+  <br>
+  <br>
 
-# Mostrar vista
+  <h3 align="center">¿Quieres buscar todos los pokemones por tipo?</h3>
 
-echo "Entero: $var, Boolean: $boolean, Mensaje: $msj";
-echo "<br>";
-# Array
-$array1 = array(1,2,3,4);
-$array2 = array("platano" => "amarillo", "frutilla" => "roja");
+  <?php
+  #Primero obtenemos todos los tipos de pokemones
+  require("config/conexion.php");
+  $result = $db -> prepare("SELECT DISTINCT tipo FROM pokemones;");
+  $result -> execute();
+  $dataCollected = $result -> fetchAll();
+  ?>
 
-print_r($array1);
+  <form align="center" action="consultas/consulta_tipo.php" method="post">
+    Seleccinar un tipo:
+    <select name="tipo">
+      <?php
+      #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
+      foreach ($dataCollected as $d) {
+        echo "<option value=$d[0]>$d[0]</option>";
+      }
+      ?>
+    </select>
+    <br><br>
+    <input type="submit" value="Buscar por tipo">
+  </form>
 
-echo "<br>";
-
-# foreach
-
-foreach ($array2 as $fruta => $color){
-    echo "<p>$fruta es de color: $color </p>";
-}
-
-print_r($array2);
-
-?>
-
-
-
+  <br>
+  <br>
+  <br>
+  <br>
 </body>
 </html>
