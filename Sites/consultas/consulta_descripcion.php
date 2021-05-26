@@ -8,7 +8,7 @@
   require("../config/conexion.php");
 
 	$descripcion = strtolower($_POST["descripcion"]);
-	echo "$desc";
+	echo "$descripcion";
  	$query = "SELECT usuarios.id_usuario usuarios.nombre FROM usuarios, compras, productos WHERE productos.descripcion LIKE '%$descripcion%' AND usuarios.id_usuario = compras.id_usuario AND produtos.id_producto = compras.id_producto;";
 	$result = $db -> prepare($query);
 	$result -> execute();
