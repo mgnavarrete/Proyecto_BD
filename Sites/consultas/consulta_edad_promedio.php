@@ -1,8 +1,5 @@
 <?php include('../templates/header_bulma.html');   ?>
 
-<h1 align="center">Promedio de edad de los trabajadores </h1>
-
-
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
