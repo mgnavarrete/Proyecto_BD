@@ -2,12 +2,13 @@
 
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
+  $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conservas");
   $key = $_POST["tipo"];
   $producto = $tipo_producto[$key];
 
-  $query = "SELECT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda 
-  = stocks.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre ;";
+  $query = "SELECT tiendas.id_tienda, tiendas.nombre, COUNT(tiendas.id_tienda) FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda 
+  = stocks.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre ORDER BY COUNT(tiendas.id_tienda) DESC LIMIT 1;
+  ";
   $result = $db -> prepare($query);
   $result -> execute();
   $tiendas = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
@@ -24,10 +25,11 @@
     <tr>
       <th>ID</th>
       <th>Nombre</th>
+      <th>Cantidad Vendida</th>
     </tr>
   <?php
 	foreach ($tiendas as $t) {
-		echo "<tr> <td>$t[0]</td> <td>$t[1]</td></tr>";
+		echo "<tr> <td>$t[0]</td> <td>$t[1]</td> <td>$t[2]</td></tr>";
   }
   ?>
 	</table>
