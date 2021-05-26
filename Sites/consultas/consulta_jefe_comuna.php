@@ -1,8 +1,4 @@
-<?php include('../templates/header.html');   ?>
-
-<body>
-
-<h1 align="center">Jefes en la comuna </h1>
+<?php include('../templates/header_bulma.html');   ?>
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
@@ -16,7 +12,16 @@
 	$jefes = $result -> fetchAll();
   ?>
 
-	<table align="center">
+
+
+<section class="hero is-info is-fullheight">
+  <div class="hero-body">
+    <div class="">
+    <p class="title">
+      Despacho de Tiendas
+    </p>
+  
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">
     <tr>
     <th>ID</th>
       <th>Jefe</th>
@@ -28,4 +33,11 @@
   ?>
 	</table>
 
-<?php include('../templates/footer.html'); ?>
+
+
+    </div>
+  </div>
+</section>
+    
+
+<?php include('../templates/footer_bulma.html');   ?> 

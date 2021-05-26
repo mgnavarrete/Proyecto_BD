@@ -1,6 +1,5 @@
-<?php include('../templates/header.html');   ?>
+<?php include('../templates/header_bulma.html');   ?>
 
-<body>
 <h1 align="center">Promedio de edad de los trabajadores </h1>
 
 
@@ -23,12 +22,34 @@
 
 	$promedio = $sum_edades/ sizeof($edades);
 	if ($total == 0){
-		echo "<h2> No hay trabajadores en esta comuna </h2";
+		echo "<section class="hero is-info is-fullheight">
+		<div class="hero-body">
+		  <div class="">
+		  <p class="title">
+			No hay trabajadores en esta comuna
+		  </p>
+		
+		  </div>
+		</div>
+	  </section>";
 	}
 
 	else{
-	echo "<h2> La edad promedio de los trabajadores de $comuna es: $promedio </h2";
-	}
+	
+	echo "<section class="hero is-info is-fullheight">
+		<div class="hero-body">
+		  <div class="">
+		  <p class="title">
+		  La edad promedio de los trabajadores de $comuna es: $promedio
+		  </p>
+		
+		  </div>
+		</div>
+	  </section>";
+}
  ?>
 
-<?php include('../templates/footer.html'); ?>
+
+
+
+<?php include('../templates/footer_bulma.html');   ?> 
