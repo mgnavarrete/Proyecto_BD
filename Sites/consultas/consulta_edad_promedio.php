@@ -29,7 +29,7 @@
 
 
 	else{
-		echo"La edad promedio de los trabajadores de $comuna es: <strong>$comuna</strong $promedio";
+		echo"La edad promedio de los trabajadores de $comuna es: <strong>$promedio</strong $promedio";
 
 	
 }

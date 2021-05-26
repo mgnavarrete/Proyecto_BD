@@ -28,7 +28,7 @@
       <th>Usuario</th>
     </tr>
   <?php
-	foreach ($Usuarios as $user) {
+	foreach ($usuarios as $user) {
 		echo "<tr> <td>$user[0]</td> <td>$user[1]</td></tr>";
   }
   ?>
