@@ -24,7 +24,16 @@
 
 	else{
 	
-	echo "<h1>La edad promedio de los trabajadores de $comuna es: $promedio </h1>";
+	echo "<div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+        Title
+      </p>
+      <p class="subtitle">
+        Subtitle
+      </p>
+    </div>
+  </div>";
 }
  ?>
 
