@@ -8,7 +8,7 @@
   require("../config/conexion.php");
 
 	$descripcion = strtolower($_POST["descripcion"]);
- 	$query = "SELECT DISTINCT usuarios.id_usuario, usuarios.nombre FROM usuarios, compras, productos WHERE productos.descripcion LIKE '%$descripcion%' AND usuarios.id_usuario = compras.id_usuario AND productos.id_producto = compras.id_producto;";
+ 	$query = "SELECT DISTINCT usuarios.id_usuario, usuarios.nombre FROM usuarios, compras, productos WHERE productos.descripcion LIKE '%$descripcion%' AND usuarios.id_usuario = compras.id_usuario AND productos.id_producto = compras.id_producto ORDER BY usuarios.id_usuario;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usuarios = $result -> fetchAll();
