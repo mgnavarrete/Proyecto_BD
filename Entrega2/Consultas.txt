@@ -1,12 +1,12 @@
-1. SELECT tiendas.nombre, tiendas_despacho.comuna_despacho FROM tiendas, tiendas_despacho WHERE tiendas.id_tienda = tiendas_despacho.id_tienda;
+1. SELECT tiendas.id_tienda, tiendas.nombre, tiendas_despacho.comuna_despacho FROM tiendas, tiendas_despacho WHERE tiendas.id_tienda = tiendas_despacho.id_tienda ORDER BY tiendas.id_tienda;
 
-2. SELECT tiendas.id_jefe, personal.nombre FROM tiendas, personal, direcciones WHERE personal.id_personal = tiendas.id_jefe AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna LIKE '%$comuna%';
+2. SELECT tiendas.id_jefe, personal.nombre FROM tiendas, personal, direcciones WHERE personal.id_personal = tiendas.id_jefe AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna LIKE '%$comuna%' ORDER BY tiendas.id_jefe;
 
-3. SELECT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda = stocks.id_tienda;
+3. SELECT DISTINCT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda = stocks.id_tienda ORDER BY tiendas.id_tienda;
 
-4. SELECT usuarios.id_usuario, usuarios.nombre FROM usuarios, compras, productos WHERE productos.descripcion LIKE '%$descripcion%' AND usuarios.id_usuario = compras.id_usuario AND productos.id_producto = compras.id_producto;
+4. SELECT DISTINCT usuarios.id_usuario, usuarios.nombre FROM usuarios, compras, productos WHERE productos.descripcion LIKE '%$descripcion%' AND usuarios.id_usuario = compras.id_usuario AND productos.id_producto = compras.id_producto ORDER BY usuarios.id_usuario;
 
 5. SELECT personal.edad FROM tiendas, personal, direcciones WHERE personal.id_tienda = tiendas.id_tienda AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna LIKE '%$comuna%';
 
-6. SELECT tiendas.id_tienda, tiendas.nombre, COUNT(tiendas.id_tienda) FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%frescos%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda 
-= stocks.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre ORDER BY COUNT(tiendas.id_tienda) DESC LIMIT 1;
+6. SELECT tiendas.id_tienda, tiendas.nombre, COUNT(tiendas.id_tienda) FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda 
+  = stocks.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre ORDER BY COUNT(tiendas.id_tienda) DESC LIMIT 1;
