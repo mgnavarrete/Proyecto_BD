@@ -9,7 +9,7 @@
 4. Usuarios: id_usuario, nombre, rut, edad, sexo, id_direccion.
 5. Direcciones: id_direccion, nombre_direccion, comuna.
 6. Compras: id_compra, id_usuarios, id_direccion, id_producto, cantidad, id_tienda.
-7. Productos: id_producto, nombre, precio, descripcion.
+7. Productos: id_producto, nombre, precio, descripcion, tipo{no_comestibles,frecos,congelados,conservas}
 8. No Comestibles: id_producto, ancho, largo, alto, peso.
 9. Congelados: id_producto, fecha_exp, peso.
 10. Frescos: id_producto, fecha_exp, duracion_sin_refrigerar.
