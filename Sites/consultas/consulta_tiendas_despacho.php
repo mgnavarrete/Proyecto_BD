@@ -20,7 +20,7 @@
       Despacho de Tiendas
     </p>
   
-    <table align="center">
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">
     <tr>
       <th>Nombre</th>
       <th>Comuna</th>
