@@ -1,7 +1,5 @@
-<?php include('../templates/header.html');   ?>
+<?php include('../templates/header_bulma.html');   ?>
 
-<body>
-<h1 align="center">Disponibilidad de tipo de productos </h1>
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
@@ -14,17 +12,30 @@
   $tiendas = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
   ?>
 
-  <table align="center">
+  <section class="hero is-info is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+    <p class="title">
+    Disponibilidad de tipo de productos
+    </p>
+  
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">
     <tr>
-
+      <th>ID</th>
       <th>Nombre</th>
-
     </tr>
   <?php
-  foreach ($tiendas as $t) {
-    echo "<tr> <td>$t[0]</td> </tr>";
+	foreach ($tiendas as $t) {
+		echo "<tr> <td>$t[0]</td> <td>$t[1]</td></tr>";
   }
   ?>
-  </table>
+	</table>
 
-<?php include('../templates/footer.html'); ?>
+
+
+    </div>
+  </div>
+</section>
+
+
+<?php include('../templates/footer_bulma.html');   ?> 
