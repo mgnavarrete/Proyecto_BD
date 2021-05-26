@@ -1,5 +1,22 @@
 <?php include('templates/header_bulma.html');   ?>
 
+
+<section class="hero is-medium is-success">
+  <div class="hero-body">
+  <div class="container has-text-centered">
+      <p class="title ">
+      Ver Despachos por Tiendas
+      </p>
+      <form align="center" action="consultas/consulta_tiendas_despacho.php" method="post">
+    <input class="button is-info is-large" type="submit" value="Ver">
+  </form>
+  </div>
+  </div>
+</section>
+
+
+
+
 <section class="hero is-medium is-info">
   <div class="hero-body">
   <div class="container has-text-centered">

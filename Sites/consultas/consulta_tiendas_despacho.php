@@ -1,8 +1,5 @@
-<?php include('../templates/header.html');   ?>
+<?php include('../templates/header_bulma.html');   ?>
 
-<body>
-
-<h1 align="center">Comunas donde despachan las tiendas </h1>
 
 
 <?php
@@ -15,8 +12,15 @@
 	$tiendas = $result -> fetchAll();
 
   ?>
-    
-	<table align="center">
+
+<section class="hero is-danger is-fullheight">
+  <div class="hero-body">
+    <div class="">
+    <p class="title">
+      Despacho de Tiendas
+    </p>
+  
+    <table align="center">
     <tr>
       <th>Nombre</th>
       <th>Comuna</th>
@@ -28,4 +32,12 @@
   ?>
 	</table>
 
-<?php include('../templates/footer.html'); ?>
+
+
+    </div>
+  </div>
+</section>
+    
+	
+
+<?php include('../templates/footer_bulma.html');   ?> 
