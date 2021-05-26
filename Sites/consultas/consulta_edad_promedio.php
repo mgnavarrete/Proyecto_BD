@@ -19,12 +19,20 @@
 
 	$promedio = $sum_edades/ sizeof($edades);
 	if ($total == 0){
-		echo "<h1>No hay trabajadores en esta comuna </h1>";
-	}
+		echo "<div class="hero-body">";
+		echo"<div class="container has-text-centered">";
+		echo" <p class="title"> No hay trabajadores en esta comuna </p>";
+		echo"</div>";
+		echo"</div>";
+
 
 	else{
+		echo "<div class="hero-body">";
+		echo"<div class="container has-text-centered">";
+		echo" <p class="title"> La edad promedio de los trabajadores de $comuna es: $promedio </p>";
+		echo"</div>";
+		echo"</div>";
 	
-	echo "<h1>La edad promedio de los trabajadores de $comuna es: $promedio </h1>";
 }
  ?>
 
