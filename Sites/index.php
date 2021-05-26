@@ -1,33 +1,5 @@
 <?php include('templates/header_bulma.html');   ?>
 
-
-  <!-- Hero content: will be in the middle -->
-  <section class="hero is-info is-halfheight">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <p class="title">
-        Bienvenido Al Mejor Buscador de Tiendas y Productos
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-medium">
-  <div class="hero-body">
-  <div class="container has-text-centered">
-      <p class="title ">
-      Ver Despacho de Tiendas
-      </p>
-      <form align="center" action="consultas/consulta_tiendas_despacho.php" method="post">
-       
-        <input class="button is-info is-large" type="submit" value="Ver">
- 
-      </form>
-  </div>
-  </div>
-</section>
-
-
 <section class="hero is-medium is-info">
   <div class="hero-body">
   <div class="container has-text-centered">
