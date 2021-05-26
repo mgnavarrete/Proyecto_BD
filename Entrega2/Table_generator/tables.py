@@ -102,7 +102,7 @@ def generate_productos():
             id_productos.append(id_producto)
         
         elif peso == '' and duracion_sin_refrigerar == '' and id_producto not in id_productos:
-            table.write(f"{id_producto},{nombre},{precio},{descripcion},congelados\n")
+            table.write(f"{id_producto},{nombre},{precio},{descripcion},conservas\n")
             id_productos.append(id_producto)
 
     file.close()

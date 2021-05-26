@@ -7,7 +7,7 @@ id_producto,nombre,precio,descripcion,tipo
 382,kiwi,10967,frutas,frescos
 367,teclado,7331,producto tecnologico,no_comestibles
 327,hallulla,6887,pan,frescos
-83, frutillas en conserva,12139,fruta en conserva,congelados
+83, frutillas en conserva,12139,fruta en conserva,conservas
 412,marraqueta,14464,pan,frescos
 384,pantalla lineas,13539,pantalla de luz,no_comestibles
 394,limon,5808,verduras,frescos
@@ -16,7 +16,7 @@ id_producto,nombre,precio,descripcion,tipo
 191,marraqueta,6589,pan,frescos
 151,cerdo congelado,13962,carne congelada,congelados
 284,marraqueta,14433,pan,frescos
-13,esparragos frasco,14537,verdura en conserva,congelados
+13,esparragos frasco,14537,verdura en conserva,conservas
 257,pantalon,12445,ropa,no_comestibles
 41,hamburguesa de verduras,13789,hamburguesa,congelados
 40,pantalla lisa,11843,pantalla de luz,no_comestibles
@@ -24,7 +24,7 @@ id_producto,nombre,precio,descripcion,tipo
 32,pantalla para colgar,6200,pantalla de luz,no_comestibles
 104,chaqueta,9435,ropa,no_comestibles
 313,platano,12727,frutas,frescos
-171,mix de frutas en conserva,8658,fruta en conserva,congelados
+171,mix de frutas en conserva,8658,fruta en conserva,conservas
 399,mouse,14474,producto tecnologico,no_comestibles
 401,arvejas congeladas,14782,verduras congeladas,congelados
 400,mix de verduras congeladas,13648,verduras congeladas,congelados
@@ -32,7 +32,7 @@ id_producto,nombre,precio,descripcion,tipo
 167,hamburguesa de vacuno,9224,hamburguesa,congelados
 389,manzana,7436,frutas,frescos
 341,pollo congelado,10534,carne congelada,congelados
-352,mix de frutas en conserva,14348,fruta en conserva,congelados
+352,mix de frutas en conserva,14348,fruta en conserva,conservas
 30,vacuno,8973,carne,frescos
 356,kiwi,14585,frutas,frescos
 128,pavo,9003,carne,frescos
@@ -48,21 +48,21 @@ id_producto,nombre,precio,descripcion,tipo
 381,pantalla para colgar,8882,pantalla de luz,no_comestibles
 220,manzana,11649,frutas,frescos
 256,porotos congelados,14619,verduras congeladas,congelados
-92,garbanzos en conserva,11554,verdura en conserva,congelados
+92,garbanzos en conserva,11554,verdura en conserva,conservas
 302,teclado,8227,producto tecnologico,no_comestibles
 275,pantalla lisa,13875,pantalla de luz,no_comestibles
 116,cerdo congelado,11027,carne congelada,congelados
-376,arvejas en conserva,14460,verdura en conserva,congelados
+376,arvejas en conserva,14460,verdura en conserva,conservas
 37,cerdo,13208,carne,frescos
 370,pera,14775,frutas,frescos
 122,porotos congelados,11540,verduras congeladas,congelados
-219,papaya en conserva,13561,fruta en conserva,congelados
+219,papaya en conserva,13561,fruta en conserva,conservas
 28,cerdo,12064,carne,frescos
 135,arvejas congeladas,9491,verduras congeladas,congelados
 182,manzana,14158,frutas,frescos
 332,pantalla lisa,7833,pantalla de luz,no_comestibles
 87,teclado,12613,producto tecnologico,no_comestibles
-142,mix de frutas en conserva,5219,fruta en conserva,congelados
+142,mix de frutas en conserva,5219,fruta en conserva,conservas
 344,pantalla para colgar,11629,pantalla de luz,no_comestibles
 53,durazno,5640,frutas,frescos
 73,pantalla lineas,8949,pantalla de luz,no_comestibles
@@ -90,7 +90,7 @@ id_producto,nombre,precio,descripcion,tipo
 208,telefono,9760,producto tecnologico,no_comestibles
 0,merlusa,8706,pescado congelado,congelados
 181,hamburguesa de verduras,5304,hamburguesa,congelados
-62, frutillas en conserva,6958,fruta en conserva,congelados
+62, frutillas en conserva,6958,fruta en conserva,conservas
 160,merlusa,10910,pescado congelado,congelados
 246,pollo,9006,carne,frescos
 409,pantalla lineas,12158,pantalla de luz,no_comestibles
@@ -114,13 +114,13 @@ id_producto,nombre,precio,descripcion,tipo
 308,mix de verduras congeladas,6920,verduras congeladas,congelados
 414,pantalla lineas,11871,pantalla de luz,no_comestibles
 298,vestido,5065,ropa,no_comestibles
-326,esparragos frasco,14352,verdura en conserva,congelados
+326,esparragos frasco,14352,verdura en conserva,conservas
 175,hallulla,11970,pan,frescos
 405,pavo,7717,carne,frescos
 76,manzana,9326,frutas,frescos
 396,porotos congelados,8296,verduras congeladas,congelados
 363,jeans,7348,ropa,no_comestibles
-1,mix de frutas en conserva,10730,fruta en conserva,congelados
+1,mix de frutas en conserva,10730,fruta en conserva,conservas
 140,teclado,6971,producto tecnologico,no_comestibles
 292,vacuno congelado,12122,carne congelada,congelados
 16,hamburguesa de quinoa,5914,hamburguesa,congelados
@@ -151,10 +151,10 @@ id_producto,nombre,precio,descripcion,tipo
 268,teclado,12598,producto tecnologico,no_comestibles
 101,mix de verduras congeladas,8253,verduras congeladas,congelados
 334,pantalla lineas,9860,pantalla de luz,no_comestibles
-33, frutillas en conserva,9530,fruta en conserva,congelados
+33, frutillas en conserva,9530,fruta en conserva,conservas
 162,pollo,9026,carne,frescos
 304,jeans,8403,ropa,no_comestibles
-392,arvejas en conserva,13884,verdura en conserva,congelados
+392,arvejas en conserva,13884,verdura en conserva,conservas
 74,pantalla lisa,14478,pantalla de luz,no_comestibles
 35,hamburguesa de vacuno,13174,hamburguesa,congelados
 301,carne molida,6414,carne congelada,congelados
@@ -175,7 +175,7 @@ id_producto,nombre,precio,descripcion,tipo
 252,pavo congelado,6840,carne congelada,congelados
 98,teclado,5890,producto tecnologico,no_comestibles
 49,televisor,11837,producto tecnologico,no_comestibles
-408,garbanzos en conserva,12008,verdura en conserva,congelados
+408,garbanzos en conserva,12008,verdura en conserva,conservas
 84,pantalla lisa,14987,pantalla de luz,no_comestibles
 217,pollo,13965,carne,frescos
 269,televisor,11826,producto tecnologico,no_comestibles
@@ -197,21 +197,21 @@ id_producto,nombre,precio,descripcion,tipo
 82,durazno,9861,frutas,frescos
 26,manzana,7438,frutas,frescos
 194,hallulla,9444,pan,frescos
-321,esparragos frasco,9752,verdura en conserva,congelados
+321,esparragos frasco,9752,verdura en conserva,conservas
 210,pantalla lisa,7658,pantalla de luz,no_comestibles
 15,durazno,13302,frutas,frescos
-107,esparragos frasco,7134,verdura en conserva,congelados
-355,mix de frutas en conserva,12120,fruta en conserva,congelados
+107,esparragos frasco,7134,verdura en conserva,conservas
+355,mix de frutas en conserva,12120,fruta en conserva,conservas
 258,chaqueta,13813,ropa,no_comestibles
 148,palta,9424,verduras,frescos
 270,hamburguesa de verduras,12794,hamburguesa,congelados
-95,esparragos frasco,9882,verdura en conserva,congelados
+95,esparragos frasco,9882,verdura en conserva,conservas
 353,pavo congelado,7137,carne congelada,congelados
 309,carne molida,5014,carne congelada,congelados
 165,camiseta,10613,ropa,no_comestibles
 123,choclo congelado,14418,verduras congeladas,congelados
-338,mix de frutas en conserva,10464,fruta en conserva,congelados
-413,durazno en conserva,12428,fruta en conserva,congelados
+338,mix de frutas en conserva,10464,fruta en conserva,conservas
+413,durazno en conserva,12428,fruta en conserva,conservas
 247,poleron,12512,ropa,no_comestibles
 248,pantalla para colgar,8944,pantalla de luz,no_comestibles
 111,lechuga,8330,verduras,frescos
@@ -222,12 +222,12 @@ id_producto,nombre,precio,descripcion,tipo
 56,lenguado,5173,pescado congelado,congelados
 89,pantalla lineas,6647,pantalla de luz,no_comestibles
 120,marraqueta,13520,pan,frescos
-300,durazno en conserva,5467,fruta en conserva,congelados
+300,durazno en conserva,5467,fruta en conserva,conservas
 231,jeans,13914,ropa,no_comestibles
 398,pantalla papel,14579,pantalla de luz,no_comestibles
 184,hamburguesa de vacuno,6871,hamburguesa,congelados
 131,cerdo congelado,8452,carne congelada,congelados
-416,esparragos frasco,6807,verdura en conserva,congelados
+416,esparragos frasco,6807,verdura en conserva,conservas
 44,lenguado,12660,pescado congelado,congelados
 260,limon,10707,verduras,frescos
 329,hallulla,12550,pan,frescos
@@ -239,8 +239,8 @@ id_producto,nombre,precio,descripcion,tipo
 42,cerdo,6686,carne,frescos
 23,arvejas congeladas,12666,verduras congeladas,congelados
 320,pantalla lineas,8495,pantalla de luz,no_comestibles
-349, frutillas en conserva,7657,fruta en conserva,congelados
-19,durazno en conserva,8421,fruta en conserva,congelados
+349, frutillas en conserva,7657,fruta en conserva,conservas
+19,durazno en conserva,8421,fruta en conserva,conservas
 286,manzana,13091,frutas,frescos
 262,lenguado,14080,pescado congelado,congelados
 372,mouse,9082,producto tecnologico,no_comestibles
@@ -251,14 +251,14 @@ id_producto,nombre,precio,descripcion,tipo
 285,durazno,13057,frutas,frescos
 403,vestido,11750,ropa,no_comestibles
 121,pan de molde,7108,pan,frescos
-11,papaya en conserva,7060,fruta en conserva,congelados
+11,papaya en conserva,7060,fruta en conserva,conservas
 322,mix de verduras congeladas,11198,verduras congeladas,congelados
-31,papaya en conserva,8954,fruta en conserva,congelados
+31,papaya en conserva,8954,fruta en conserva,conservas
 234,brocoli,10802,verduras,frescos
 386,carne molida,7866,carne congelada,congelados
 137,jeans,11374,ropa,no_comestibles
-202,garbanzos en conserva,14323,verdura en conserva,congelados
-159,esparragos frasco,13153,verdura en conserva,congelados
+202,garbanzos en conserva,14323,verdura en conserva,conservas
+159,esparragos frasco,13153,verdura en conserva,conservas
 235,vacuno,8664,carne,frescos
 305,teclado,9834,producto tecnologico,no_comestibles
 294,pollo congelado,10551,carne congelada,congelados
@@ -266,9 +266,9 @@ id_producto,nombre,precio,descripcion,tipo
 200,hamburguesa de verduras,5681,hamburguesa,congelados
 88,mouse,12978,producto tecnologico,no_comestibles
 99,arvejas congeladas,12265,verduras congeladas,congelados
-12,mix de frutas en conserva,9432,fruta en conserva,congelados
-199,garbanzos en conserva,9115,verdura en conserva,congelados
-228, frutillas en conserva,13599,fruta en conserva,congelados
+12,mix de frutas en conserva,9432,fruta en conserva,conservas
+199,garbanzos en conserva,9115,verdura en conserva,conservas
+228, frutillas en conserva,13599,fruta en conserva,conservas
 390,vacuno congelado,12201,carne congelada,congelados
 354,pollo congelado,8252,carne congelada,congelados
 230,pantalla para colgar,5925,pantalla de luz,no_comestibles
@@ -280,13 +280,13 @@ id_producto,nombre,precio,descripcion,tipo
 106,pantalla papel,8041,pantalla de luz,no_comestibles
 6,marraqueta,7830,pan,frescos
 243,choclo congelado,6481,verduras congeladas,congelados
-14,durazno en conserva,8285,fruta en conserva,congelados
+14,durazno en conserva,8285,fruta en conserva,conservas
 65,hamburguesa de verduras,7556,hamburguesa,congelados
 67,limon,13531,verduras,frescos
 410,salmon,12879,pescado congelado,congelados
 185,cerdo,12579,carne,frescos
 346,porotos congelados,7726,verduras congeladas,congelados
-395,choclo en conserva,11836,verdura en conserva,congelados
+395,choclo en conserva,11836,verdura en conserva,conservas
 335,pan de molde,7937,pan,frescos
 170,mix de verduras congeladas,7212,verduras congeladas,congelados
 8,pantalla papel,5556,pantalla de luz,no_comestibles
@@ -295,7 +295,7 @@ id_producto,nombre,precio,descripcion,tipo
 156,hallulla,11210,pan,frescos
 24,teclado,9510,producto tecnologico,no_comestibles
 179,teclado,12795,producto tecnologico,no_comestibles
-59,durazno en conserva,5186,fruta en conserva,congelados
+59,durazno en conserva,5186,fruta en conserva,conservas
 271,televisor,9188,producto tecnologico,no_comestibles
 177,hamburguesa de pollo,6480,hamburguesa,congelados
 316,vacuno,13806,carne,frescos
@@ -310,12 +310,12 @@ id_producto,nombre,precio,descripcion,tipo
 364,mouse,11097,producto tecnologico,no_comestibles
 117,telefono,6853,producto tecnologico,no_comestibles
 48,cerdo,13194,carne,frescos
-343,choclo en conserva,12429,verdura en conserva,congelados
+343,choclo en conserva,12429,verdura en conserva,conservas
 152,lenguado,13791,pescado congelado,congelados
 43,telefono,12517,producto tecnologico,no_comestibles
 72,camisa,9228,ropa,no_comestibles
 51,limon,10356,verduras,frescos
-391,choclo en conserva,8087,verdura en conserva,congelados
+391,choclo en conserva,8087,verdura en conserva,conservas
 255,vacuno congelado,5421,carne congelada,congelados
 387,lenguado,6433,pescado congelado,congelados
 77,hallulla,14637,pan,frescos
@@ -325,22 +325,22 @@ id_producto,nombre,precio,descripcion,tipo
 155,vestido,12164,ropa,no_comestibles
 282,salmon,11494,pescado congelado,congelados
 216,pera,14400,frutas,frescos
-124,garbanzos en conserva,11677,verdura en conserva,congelados
+124,garbanzos en conserva,11677,verdura en conserva,conservas
 204,durazno,7673,frutas,frescos
 277,limon,7442,verduras,frescos
-227,arvejas en conserva,13905,verdura en conserva,congelados
+227,arvejas en conserva,13905,verdura en conserva,conservas
 296,salmon,9495,pescado congelado,congelados
-71,papaya en conserva,14577,fruta en conserva,congelados
+71,papaya en conserva,14577,fruta en conserva,conservas
 345,hamburguesa de verduras,12480,hamburguesa,congelados
 103,hamburguesa de vacuno,11871,hamburguesa,congelados
-147,arvejas en conserva,10396,verdura en conserva,congelados
+147,arvejas en conserva,10396,verdura en conserva,conservas
 80,pera,11624,frutas,frescos
 136,pollo,8650,carne,frescos
 64,marraqueta,11303,pan,frescos
 358,platano,10315,frutas,frescos
 233,cerdo congelado,7670,carne congelada,congelados
 193,reineta,12780,pescado congelado,congelados
-141,mix de frutas en conserva,6583,fruta en conserva,congelados
+141,mix de frutas en conserva,6583,fruta en conserva,conservas
 319,vacuno,13414,carne,frescos
 130,hamburguesa de verduras,11010,hamburguesa,congelados
 105,hamburguesa de vacuno,14223,hamburguesa,congelados
@@ -352,7 +352,7 @@ id_producto,nombre,precio,descripcion,tipo
 274,pera,11410,frutas,frescos
 109,brocoli,7370,verduras,frescos
 2,pantalla lisa,5609,pantalla de luz,no_comestibles
-115, frutillas en conserva,9542,fruta en conserva,congelados
+115, frutillas en conserva,9542,fruta en conserva,conservas
 289,salmon,14016,pescado congelado,congelados
 132,mix de verduras congeladas,10478,verduras congeladas,congelados
 288,mix de verduras congeladas,6320,verduras congeladas,congelados
@@ -370,18 +370,18 @@ id_producto,nombre,precio,descripcion,tipo
 10,reineta,10545,pescado congelado,congelados
 139,hamburguesa de quinoa,13665,hamburguesa,congelados
 290,hallulla,8722,pan,frescos
-207, frutillas en conserva,6563,fruta en conserva,congelados
+207, frutillas en conserva,6563,fruta en conserva,conservas
 212,hamburguesa de quinoa,12482,hamburguesa,congelados
 240,salmon,7427,pescado congelado,congelados
 337,pantalla lineas,11430,pantalla de luz,no_comestibles
 213,calcetin,14881,ropa,no_comestibles
 281,vestido,6522,ropa,no_comestibles
-336,esparragos frasco,7752,verdura en conserva,congelados
+336,esparragos frasco,7752,verdura en conserva,conservas
 189,telefono,13048,producto tecnologico,no_comestibles
 225,pantalla papel,8193,pantalla de luz,no_comestibles
 242,marraqueta,6667,pan,frescos
 232,mouse,7653,producto tecnologico,no_comestibles
-241,durazno en conserva,12190,fruta en conserva,congelados
+241,durazno en conserva,12190,fruta en conserva,conservas
 361,mouse,10779,producto tecnologico,no_comestibles
 393,televisor,8016,producto tecnologico,no_comestibles
 183,hallulla,10309,pan,frescos
@@ -396,14 +396,14 @@ id_producto,nombre,precio,descripcion,tipo
 164,platano,13220,frutas,frescos
 29,limon,13395,verduras,frescos
 306,hamburguesa de verduras,7976,hamburguesa,congelados
-54,papaya en conserva,6280,fruta en conserva,congelados
+54,papaya en conserva,6280,fruta en conserva,conservas
 196,reineta,13212,pescado congelado,congelados
 359,hamburguesa de vacuno,9503,hamburguesa,congelados
 307,marraqueta,10434,pan,frescos
 4,hallulla,13556,pan,frescos
 406,pantalla para colgar,5421,pantalla de luz,no_comestibles
 251,vacuno,13598,carne,frescos
-201,arvejas en conserva,11500,verdura en conserva,congelados
+201,arvejas en conserva,11500,verdura en conserva,conservas
 180,hallulla,7278,pan,frescos
 161,cerdo,13134,carne,frescos
 145,hamburguesa de verduras,8137,hamburguesa,congelados
