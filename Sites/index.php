@@ -1,118 +1,131 @@
-<?php include('templates/header.html');   ?>
-
-<body>
+<?php include('templates/header_bulma.html');   ?>
 
 
+  <!-- Hero content: will be in the middle -->
+  <section class="hero is-info is-halfheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+        Bienvenido Al Mejor Buscador de Tiendas y Productos
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-medium">
+  <div class="hero-body">
+  <div class="container has-text-centered">
+      <p class="title ">
+      Ver Despacho de Tiendas
+      </p>
+      <form align="center" action="consultas/consulta_tiendas_despacho.php" method="post">
+       
+        <input class="button is-info is-large" type="submit" value="Ver">
+ 
+      </form>
+  </div>
+  </div>
+</section>
 
 
-  <h1 align="center">Buscador de Tiendas y Productos </h1>
-  <p style="text-align:center;">Acá podras encontrar toda la infromación de tiendas y sus productos disponibles</p>
-
-  <br>
-
-  <h3 align="center"> Ver Despacho de Tiendas</h3>
-
-  <form align="center" action="consultas/consulta_tiendas_despacho.php" method="post">
-    <input type="submit" value="Ver">
+<section class="hero is-medium is-info">
+  <div class="hero-body">
+  <div class="container has-text-centered">
+      <p class="title ">
+      Buscar Jefes Por Comuna
+      </p>
+      <form align="center" action="consultas/consulta_jefe_comuna.php" method="post">
+      <input class="input is-success is-large" type="text" name="comuna" placeholder="Escriba aquí la Comuna">
+       <br/>
+       <br/><br/>
+      <input class="button is-success is-large" type="submit" value="Buscar">
   </form>
+  </div>
+  </div>
+</section>
+
+<section class="hero is-medium is-success">
+  <div class="hero-body">
+  <div class="container has-text-centered">
+      <p class="title ">
+      Buscar Tienda que contenga Tipo de Producto
+      </p>
+      <form align="center" action="consultas/consulta_tienda_pro_tipo.php" method="post">
   
-  <br>
-  <br>
-  <br>
-
-
-  <br>
-
-  <h3 align="center"> ¿Quieres buscar los jefes por comuna?</h3>
-
-  <form align="center" action="consultas/consulta_jefe_comuna.php" method="post">
-    Comuna:
-    <input type="text" name="comuna">
-    <br/>
-    <br/><br/>
-    <input type="submit" value="Buscar">
-  </form>
-  
-  <br>
-  <br>
-  <br>
-
-  <h3 align="center">¿Quieres buscar la tienda que tenga algún tipo de producto?</h3>
-
-  
-
-  <form align="center" action="consultas/consulta_tienda_pro_tipo.php" method="post">
-    Seleccinar un tipo:
-    <select name="tipo">
+    <select class="select is-rounded is-info is-large" name="tipo">
       <?php
-      #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
-      $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
-      foreach ($tipo_producto as $key => $value) {
+      $tipo_producto = array("No_Comestibles", "Congelados" , "Frescos", "Conserva");
+      foreach ($tipo_producto as $key) {
         echo "<option value=$key>$key</option>";
       }
       ?>
     </select>
     <br><br>
-    <input type="submit" value="Buscar por tipo">
+    <input class="button is-info is-large" type="submit" value="Buscar por tipo">
   </form>
+  </div>
+  </div>
+</section>
 
-  <br>
-  <br>
-  <br>
-  <br>
 
-  <h3 align="center"> ¿Quieres buscar por descripción a los usuarios que comprar el producto?</h3>
+<section class="hero is-medium is-info">
+  <div class="hero-body">
+  <div class="container has-text-centered">
+      <p class="title ">
+      Buscar Usuarios que comparon productos con la descripción
+      </p>
+      <form align="center" action="consultas/consulta_descripcion.php" method="post">
 
-<form align="center" action="consultas/consulta_descripcion.php" method="post">
-  Descripcion:
-  <input type="text" name="descripcion">
-  <br/>
+        <input class="input is-success is-large" type="text" name="descripcion"  placeholder="Escriba aquí la descripción">
+          <br/>
 
-  <br/><br/>
-  <input type="submit" value="Buscar">
+          <br/><br/>
+        <input class="button is-success is-large" type="submit" value="Buscar">
 </form>
-
-  <br>
-  <br>
-  <br>
-
-
-  <h3 align="center"> ¿Quieres calcular la edad promedio de trabajadores de alguna comuna?</h3>
-
-<form align="center" action="consultas/consulta_edad_promedio.php" method="post">
-  Comuna:
-  <input type="text" name="comuna">
-  <br/>
-
-  <br/><br/>
-  <input type="submit" value="Calcular">
-</form>
-
-  <br>
-  <br>
-  <br>
+  </div>
+  </div>
+</section> 
 
 
-  <h3 align="center">¿Quieres buscar las tiendas en donde se haya comprado más de ese tipo de producto?</h3>
+<section class="hero is-medium is-success">
+  <div class="hero-body">
+  <div class="container has-text-centered">
+      <p class="title ">
+      Calcular Promedio de Edad de Trabajadores de una Comuna
+      </p>
+      <form align="center" action="consultas/consulta_edad_promedio.php" method="post">
+      <input class="input is-info is-large" type="text" name="comuna" placeholder="Escriba aquí la Comuna">
+       <br/>
+       <br/><br/>
+      <input class="button is-info is-large" type="submit" value="Calcular">
+  </form>
+  </div>
+  </div>
+</section>
 
-  <form align="center" action="consultas/consulta_tienda_tipo_mayor.php" method="post">
-    Seleccinar un tipo:
-    <select name="tipo">
+
+<section class="hero is-medium is-info">
+  <div class="hero-body">
+  <div class="container has-text-centered">
+      <p class="title ">
+      Buscar Tiendas en donde se hayan comprado más del Tipo de Producto
+      </p>
+      <form align="center" action="consultas/consulta_tienda_tipo_mayor.php" method="post">
+  
+    <select class="select is-rounded is-success is-large" name="tipo">
       <?php
-      #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
-      $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conserva");
-      foreach ($tipo_producto as $key => $value) {
+      $tipo_producto = array("No_Comestibles", "Congelados" , "Frescos", "Conserva");
+      foreach ($tipo_producto as $key) {
         echo "<option value=$key>$key</option>";
       }
       ?>
     </select>
     <br><br>
-    <input type="submit" value="Buscar por tipo">
+    <input class="button is-success is-large" type="submit" value="Buscar por tipo">
   </form>
+  </div>
+  </div>
+</section>
 
-  <br>
-  <br>
-  <br>
-  <br>
-</body>
-</html>
+
+  <?php include('templates/footer_bulma.html');   ?> 
