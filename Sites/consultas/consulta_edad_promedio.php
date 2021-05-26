@@ -20,24 +20,22 @@
 <div class="hero-body">
     <div class="container has-text-centered">
       <p class="title">
-        Title
-      </p>
 <?php
 
 	$promedio = $sum_edades/ sizeof($edades);
 	if ($total == 0){
-		echo" <p class="title"> No hay trabajadores en esta comuna </p>";
+		echo"  No hay trabajadores en esta comuna";
 
 
 
 	else{
-		echo" <p class="title"> La edad promedio de los trabajadores de $comuna es: $promedio </p>";
+		echo" <La edad promedio de los trabajadores de $comuna es: $promedio";
 
 	
 }
  ?>
 
-  
+</p>
  </div>
   </div>
 
