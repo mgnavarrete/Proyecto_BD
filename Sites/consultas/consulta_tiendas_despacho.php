@@ -13,7 +13,7 @@
 
   ?>
 
-<section class="hero is-danger is-fullheight">
+<section class="hero is-info is-fullheight">
   <div class="hero-body">
     <div class="">
     <p class="title">
