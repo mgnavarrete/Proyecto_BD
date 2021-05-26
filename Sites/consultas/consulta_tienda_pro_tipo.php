@@ -6,7 +6,7 @@
   $key = $_POST["tipo"];
   $producto = $tipo_producto[$key];
 
-  $query = "SELECT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda = stocks.id_tienda;";
+  $query = "SELECT DISTINCT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda = stocks.id_tienda;";
   $result = $db -> prepare($query);
   $result -> execute();
   $tiendas = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
