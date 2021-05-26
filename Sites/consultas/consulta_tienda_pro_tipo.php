@@ -17,7 +17,7 @@
     <div class="container has-text-centered">
     <p class="title">
     <?php
-      echo "Tiendas con productos $key disponible";
+      echo "Tiendas con productos $key disponibles";
       ?>
     
     </p>
