@@ -16,27 +16,30 @@
 		$sum_edades += $edad[0];
 	}
 
+?>
+<div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+        Title
+      </p>
+<?php
 
 	$promedio = $sum_edades/ sizeof($edades);
 	if ($total == 0){
-		echo "<div class="hero-body">";
-		echo"<div class="container has-text-centered">";
 		echo" <p class="title"> No hay trabajadores en esta comuna </p>";
-		echo"</div>";
-		echo"</div>";
+
 
 
 	else{
-		echo "<div class="hero-body">";
-		echo"<div class="container has-text-centered">";
 		echo" <p class="title"> La edad promedio de los trabajadores de $comuna es: $promedio </p>";
-		echo"</div>";
-		echo"</div>";
+
 	
 }
  ?>
 
-
+  
+ </div>
+  </div>
 
 
 <?php include('../templates/footer_bulma.html');   ?> 
