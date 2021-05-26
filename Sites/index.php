@@ -1,4 +1,4 @@
-<?php include('templates/header_bulma.html');   ?>
+<?php include('templates/header_bulma_idx.html');   ?>
 
 
 <section class="hero is-medium is-success">
