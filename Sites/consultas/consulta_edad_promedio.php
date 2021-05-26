@@ -17,27 +17,20 @@
 	}
 
 ?>
-<div class="hero-body">
-    <div class="container has-text-centered">
-      <p class="title">
+<section class="section is-medium">
 <?php
 
 	$promedio = $sum_edades/ sizeof($edades);
 	if ($total == 0){
-		echo"  No hay trabajadores en esta comuna";
+		echo"<h1 class="title">  No hay trabajadores en esta comuna</h1>";
 
 
 
 	else{
-		echo" <La edad promedio de los trabajadores de $comuna es: $promedio";
-
-	
-}
+		echo" <h1 class="title"> La edad promedio de los trabajadores de $comuna es: $promedio</h1>";}
  ?>
 
-</p>
- </div>
-  </div>
+</section>
 
 
 <?php include('../templates/footer_bulma.html');   ?> 
