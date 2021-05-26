@@ -82,15 +82,29 @@ def generate_compras():
 def generate_productos():
     file  = open('data/productosV2.csv', 'r')
     table = open('db/productos.csv', 'w')
-    table.write("id_producto,nombre,precio,descripcion\n")
+    table.write("id_producto,nombre,precio,descripcion,tipo\n")
     id_productos = ['id']
     for line in file:
-        id_producto,nombre,precio,descripcion,largo,alto,ancho,peso,fecha_de_caducidad,duracion_sin_refrigerar,tipo_de_conserva,tienda= line.strip('\n').split(",")
+        id_producto,nombre,precio,descripcion,largo,alto,ancho,peso,fecha_exp,duracion_sin_refrigerar,metodo,id_tienda= line.strip('\n').split(",")
         if id_producto in id_productos:
             pass
-        else:
-            table.write(f"{id_producto},{nombre},{precio},{descripcion}\n")
+
+        elif fecha_exp == '' and id_producto not in id_productos:
+            table.write(f"{id_producto},{nombre},{precio},{descripcion},no_comestibles\n")
             id_productos.append(id_producto)
+
+        elif largo == '' and metodo == '' and duracion_sin_refrigerar == '' and id_producto not in id_productos:
+            table.write(f"{id_producto},{nombre},{precio},{descripcion},congelados\n")
+            id_productos.append(id_producto)
+        
+        elif peso == '' and metodo == '' and id_producto not in id_productos:
+            table.write(f"{id_producto},{nombre},{precio},{descripcion},frescos\n")
+            id_productos.append(id_producto)
+        
+        elif peso == '' and duracion_sin_refrigerar == '' and id_producto not in id_productos:
+            table.write(f"{id_producto},{nombre},{precio},{descripcion},congelados\n")
+            id_productos.append(id_producto)
+
     file.close()
     table.close()
 
@@ -145,30 +159,6 @@ def generate_conservas():
             id_productos.append(id_producto)
     file.close()
     table.close()
-
-
-# def generate_stock():
-#     f1  = open('data/productosV2.csv', 'r')
-#     f2 = open('db/productos.csv', 'r')
-#     f3 = open('db/tiendas.csv', 'r')
-#     table = open('db/stock.csv', 'w')
-#     table.write("id_producto,id_tienda,cantidad\n")
-#     for f2_line in f2:
-#         id_producto,nombre,precio,descripcion = f2_line.strip('\n').split(",")
-#         if id_producto != 'id_producto':
-#             for f3_line in f3:
-#                 cantidad = 0
-#                 id_tienda, nombre, id_direccion, id_jefe = f3_line.strip("\n").split(",")
-#                 if id_tienda != 'id_tienda':
-#                     for f1_line in f1:
-#                         id,nombre,precio,descripción,largo,alto,ancho,peso,fecha_de_caducidad,duracion_sin_refrigerar,tipo_de_conserva,tienda= f1_line.strip('\n').split(",")
-#                         if id_producto in id and id_tienda in tienda:
-#                             cantidad += 1
-#                     table.write(f"{id_producto},{id_tienda},{cantidad}\n")
-#     f1.close()
-#     f2.close()
-#     f3.close()
-#     table.close()
 
 def generate_stock():
     file  = open('data/productosV2.csv', 'r')
