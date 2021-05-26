@@ -15,7 +15,7 @@
 
 <section class="hero is-info is-fullheight">
   <div class="hero-body">
-    <div class="">
+    <div class="container has-text-centered">
     <p class="title">
       Despacho de Tiendas
     </p>

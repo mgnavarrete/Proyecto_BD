@@ -3,3 +3,5 @@ SELECT tiendas.nombre, tiendas_despacho.comuna_despacho FROM tiendas, tiendas_de
 SELECT tiendas.id_jefe, personal.nombre FROM tiendas, personal, direcciones WHERE personal.id_personal = tiendas.id_jefe AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna LIKE '%$comuna%';
 
 SELECT personal.edad FROM tiendas, personal, direcciones WHERE personal.id_tienda = tiendas.id_tienda AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna LIKE '%$comuna%';
+
+SELECT usuarios.id_usuario usuarios.nombre FROM usuarios, compras, productos WHERE productos.descripcion LIKE '%$desscripcion%' AND usuarios.idusuario = compas.id_usuario AND produtos.id_producto = compras.id_producto;
