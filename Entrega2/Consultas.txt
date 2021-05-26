@@ -8,5 +8,5 @@
 
 5. SELECT personal.edad FROM tiendas, personal, direcciones WHERE personal.id_tienda = tiendas.id_tienda AND tiendas.id_direccion = direcciones.id_direccion AND direcciones.comuna LIKE '%$comuna%';
 
-6. SELECT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%frescos%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda 
-= stocks.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre;
+6. SELECT stocks.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%frescos%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda 
+= stocks.id_tienda GROUP BY stocks.id_tienda;

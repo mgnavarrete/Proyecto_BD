@@ -6,7 +6,8 @@
   $key = $_POST["tipo"];
   $producto = $tipo_producto[$key];
 
-  $query = "";
+  $query = "SELECT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda 
+  = stocks.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre LIMIT 1;";
   $result = $db -> prepare($query);
   $result -> execute();
   $tiendas = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
