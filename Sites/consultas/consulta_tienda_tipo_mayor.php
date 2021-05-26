@@ -1,4 +1,4 @@
-<?php include('../templates/header.html');   ?>
+<?php include('../templates/header_bulma.html');   ?>
 
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
@@ -38,4 +38,4 @@
 </section>
 
 
-<?php include('../templates/footer.html'); ?>
+<?php include('../templates/footer_bulma.html');   ?> 
