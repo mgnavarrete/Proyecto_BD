@@ -18,7 +18,9 @@
   <div class="hero-body">
     <div class="container has-text-centered">
     <p class="title">
-      Despacho de Tiendas
+      <?php
+      echo "Jefes de $comuna";
+      ?>
     </p>
   
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">

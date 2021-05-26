@@ -16,7 +16,10 @@
   <div class="hero-body">
     <div class="container has-text-centered">
     <p class="title">
-    Disponibilidad de tipo de productos
+    <?php
+      echo "Tiendas con productos $key disponible";
+      ?>
+    
     </p>
   
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">

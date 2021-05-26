@@ -18,7 +18,10 @@
   <div class="hero-body">
     <div class="container has-text-centered">
     <p class="title">
-    Tiendas con mayor cantidad de ventas
+    <?php
+      echo "Tiendas con mayor cantidad de productos $key comprados";
+      ?>
+    
     </p>
   
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">

@@ -18,7 +18,10 @@
   <div class="hero-body">
     <div class="container has-text-centered">
     <p class="title">
-      Usuarios que Compraron Producto
+    <?php
+      echo "Usuarios que Compraron Producto con descripción: $descripcion";
+      ?>
+      
     </p>
   
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">
