@@ -2,14 +2,22 @@
 
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conservas");
+  $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conservas", "Comestibles" => "no_comestibles");
   $key = $_POST["tipo"];
   $producto = $tipo_producto[$key];
 
-  $query = "SELECT DISTINCT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda = stocks.id_tienda ORDER BY tiendas.id_tienda;";
+  if ($producto == "Comestibles"){
+  $query = "SELECT DISTINCT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo NOT LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda = stocks.id_tienda ORDER BY tiendas.id_tienda;";
   $result = $db -> prepare($query);
   $result -> execute();
-  $tiendas = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
+  $tiendas = $result -> fetchAll();
+  } 
+  else {
+    $query = "SELECT DISTINCT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda = stocks.id_tienda ORDER BY tiendas.id_tienda;";
+    $result = $db -> prepare($query);
+    $result -> execute();
+    $tiendas = $result -> fetchAll();
+  }
   ?>
 
   <section class="hero is-info is-fullheight">

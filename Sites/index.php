@@ -43,7 +43,7 @@
   
     <select class="select is-rounded is-info is-large" name="tipo">
       <?php
-      $tipo_producto = array("No_Comestibles", "Congelados" , "Frescos", "Conserva");
+      $tipo_producto = array("No_Comestibles", "Congelados" , "Frescos", "Conserva", "Comestibles");
       foreach ($tipo_producto as $key) {
         echo "<option value=$key>$key</option>";
       }
@@ -103,7 +103,7 @@
   
     <select class="select is-rounded is-success is-large" name="tipo">
       <?php
-      $tipo_producto = array("No_Comestibles", "Congelados" , "Frescos", "Conserva");
+      $tipo_producto = array("No_Comestibles", "Congelados" , "Frescos", "Conserva", "Comestibles");
       foreach ($tipo_producto as $key) {
         echo "<option value=$key>$key</option>";
       }
