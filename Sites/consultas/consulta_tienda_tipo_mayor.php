@@ -16,9 +16,9 @@
   $tiendas = $result -> fetchAll(); 
   } 
   else {
-  $query = "SELECT tiendas.id_tienda, tiendas.nombre, COUNT(tiendas.id_tienda) FROM tiendas, productos, compras WHERE productos.tipo LIKE'%$producto%' 
+  $query = "SELECT tiendas.id_tienda, tiendas.nombre, COUNT(tiendas.nombre) FROM tiendas, productos, compras WHERE productos.tipo LIKE'%$producto%' 
   AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre 
-  ORDER BY COUNT(tiendas.id_tienda) DESC LIMIT 1;";
+  ORDER BY COUNT(tiendas.nombre) DESC LIMIT 1;";
 
 
   }
