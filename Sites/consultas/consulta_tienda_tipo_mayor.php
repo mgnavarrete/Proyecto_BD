@@ -8,17 +8,17 @@
 
 
   if($key == "Comestibles"){
-  $query = "SELECT tiendas.id_tienda, tiendas.nombre, COUNT(compras.cantidad) FROM tiendas, productos, compras WHERE productos.tipo NOT LIKE'%$producto%' 
+  $query = "SELECT tiendas.id_tienda, tiendas.nombre, SUM(compras.cantidad) FROM tiendas, productos, compras WHERE productos.tipo NOT LIKE'%$producto%' 
   AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre 
-  ORDER BY COUNT(compras.cantidad) DESC LIMIT 5;";
+  ORDER BY SUM(compras.cantidad) DESC LIMIT 5;";
   $result = $db -> prepare($query);
   $result -> execute();
   $tiendas = $result -> fetchAll(); 
   } 
   else {
-  $query = "SELECT tiendas.id_tienda, tiendas.nombre, COUNT(compras.cantidad) FROM tiendas, productos, compras WHERE productos.tipo LIKE'%$producto%' 
+  $query = "SELECT tiendas.id_tienda, tiendas.nombre, SUM(compras.cantidad) FROM tiendas, productos, compras WHERE productos.tipo LIKE'%$producto%' 
   AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre 
-  ORDER BY COUNT(compras.cantidad) DESC LIMIT 5;";
+  ORDER BY SUM(compras.cantidad) DESC LIMIT 5;";
   $result = $db -> prepare($query);
   $result -> execute();
   $tiendas = $result -> fetchAll(); 
