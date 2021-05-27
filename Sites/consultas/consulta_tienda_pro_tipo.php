@@ -6,7 +6,7 @@
   $key = $_POST["tipo"];
   $producto = $tipo_producto[$key];
 
-  if ($producto == "Comestibles"){
+  if ($key == "Comestibles"){
   $query = "SELECT DISTINCT tiendas.id_tienda, tiendas.nombre FROM tiendas, productos, stocks WHERE productos.tipo NOT LIKE'%$producto%' AND productos.id_producto = stocks.id_producto AND tiendas.id_tienda = stocks.id_tienda ORDER BY tiendas.id_tienda;";
   $result = $db -> prepare($query);
   $result -> execute();

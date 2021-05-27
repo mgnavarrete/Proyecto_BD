@@ -7,7 +7,7 @@
   $producto = $tipo_producto[$key];
 
 
-  if($producto == "Comestibles"){
+  if($key == "Comestibles"){
   $query = "SELECT tiendas.id_tienda, tiendas.nombre, COUNT(tiendas.id_tienda) FROM tiendas, productos, compras WHERE productos.tipo NOT LIKE'%$producto%' 
   AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre 
   ORDER BY COUNT(tiendas.id_tienda) DESC LIMIT 1;";
@@ -16,7 +16,7 @@
   $tiendas = $result -> fetchAll(); 
   } 
   else {
-    $query = "SELECT tiendas.id_tienda, tiendas.nombre, COUNT(tiendas.id_tienda) FROM tiendas, productos, compras WHERE productos.tipo LIKE'%$producto%' 
+  $query = "SELECT tiendas.id_tienda, tiendas.nombre, COUNT(tiendas.id_tienda) FROM tiendas, productos, compras WHERE productos.tipo LIKE'%$producto%' 
   AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre 
   ORDER BY COUNT(tiendas.id_tienda) DESC LIMIT 1;";
 
