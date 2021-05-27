@@ -5,20 +5,18 @@
   $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conservas", "Comestibles" => "no_comestibles");
   $key = $_POST["tipo"];
   $producto = $tipo_producto[$key];
-
+  
 
   if($key == "Comestibles"){
   $query = "SELECT tiendas.id_tienda, tiendas.nombre, SUM(compras.cantidad) FROM tiendas, productos, compras WHERE productos.tipo NOT LIKE'%$producto%' 
-  AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre 
-  ORDER BY SUM(compras.cantidad) DESC LIMIT 5;";
+  AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda ORDER BY SUM(compras.cantidad) DESC LIMIT 5;";
   $result = $db -> prepare($query);
   $result -> execute();
   $tiendas = $result -> fetchAll(); 
   } 
   else {
   $query = "SELECT tiendas.id_tienda, tiendas.nombre, SUM(compras.cantidad) FROM tiendas, productos, compras WHERE productos.tipo LIKE'%$producto%' 
-  AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre 
-  ORDER BY SUM(compras.cantidad) DESC LIMIT 5;";
+  AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda ORDER BY SUM(compras.cantidad) DESC LIMIT 5;";
   $result = $db -> prepare($query);
   $result -> execute();
   $tiendas = $result -> fetchAll(); 
