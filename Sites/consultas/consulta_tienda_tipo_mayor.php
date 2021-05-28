@@ -5,14 +5,14 @@
   $tipo_producto = array("", "no_comestibles", "congelados", "frescos", "conservas");
   $tipo = $_POST["tipo"];
 
-  if($tipo == "Elije Tipo de Producto"){$key = 0};
-  if($tipo == "Productos No Comestibles"){$key = 1};
-  if($tipo == "Productos Comestibles"){$key = 1};
-  if($tipo == "Productos Congelados"){$key = 2};
-  if($tipo == "Productos Frescos"){$key = 3};
-  if($tipo == "Productos en Conserva"){$key = 4};
+  if($tipo == "Elije Tipo de Producto"){$key = 0;}
+  if($tipo == "Productos No Comestibles"){$key = 1;}
+  if($tipo == "Productos Comestibles"){$key = 1;}
+  if($tipo == "Productos Congelados"){$key = 2;}
+  if($tipo == "Productos Frescos"){$key = 3;}
+  if($tipo == "Productos en Conserva"){$key = 4;}
   
-  $producto = $tipo_producto[$key];
+  $producto 
 
   if ($tipo == "Productos Comestibles"){
   $query = "SELECT tiendas.id_tienda, tiendas.nombre, SUM(compras.cantidad) FROM tiendas, productos, compras WHERE productos.tipo NOT LIKE'%$producto%' 
