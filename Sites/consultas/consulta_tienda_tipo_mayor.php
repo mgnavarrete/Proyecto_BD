@@ -35,7 +35,7 @@
     <div class="container has-text-centered">
     <p class="title">
     <?php
-      echo "Top 5 Tiendas con mayor cantidad de productos $key comprados";
+      echo "Top 5 Tiendas con mayor cantidad de $tipo comprados";
       ?>
     
     </p>

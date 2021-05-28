@@ -33,7 +33,7 @@
     <div class="container has-text-centered">
     <p class="title">
     <?php
-      echo "Tiendas con productos $key disponibles";
+      echo "Tiendas con $tipo disponibles";
       ?>
     
     </p>
