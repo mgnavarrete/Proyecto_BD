@@ -103,7 +103,7 @@
   
     <select class="select is-rounded is-success is-large" name="tipo">
       <?php
-      $tipo_producto = ("No_Comestibles", "Congelagos", "Frescos", "Conservas", "Comestibles");
+      $tipo_producto = array("No_Comestibles", "Congelagos", "Frescos", "Conservas", "Comestibles");
       foreach ($tipo_producto as $key) {
         echo "<option value=$key>$key</option>";
       }
