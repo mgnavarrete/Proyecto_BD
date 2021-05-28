@@ -2,12 +2,19 @@
 
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  $tipo_producto = array("No_Comestibles" => "no_comestibles", "Congelados" => "congelados", "Frescos" => "frescos", "Conserva" => "conservas", "Comestibles" => "no_comestibles");
-  $key = $_POST["tipo"];
-  $producto = $tipo_producto[$key];
-  
+  $tipo_producto = array("", "no_comestibles", "congelados", "frescos", "conservas");
+  $tipo = $_POST["tipo"];
 
-  if($key == "Comestibles"){
+  if($tipo == "Elije Tipo de Producto"){$key = 0};
+  if($tipo == "Productos No Comestibles"){$key = 1};
+  if($tipo == "Productos Comestibles"){$key = 1};
+  if($tipo == "Productos Congelados"){$key = 2};
+  if($tipo == "Productos Frescos"){$key = 3};
+  if($tipo == "Productos en Conserva"){$key = 4};
+  
+  $producto = $tipo_producto[$key];
+
+  if ($tipo == "Productos Comestibles"){
   $query = "SELECT tiendas.id_tienda, tiendas.nombre, SUM(compras.cantidad) FROM tiendas, productos, compras WHERE productos.tipo NOT LIKE'%$producto%' 
   AND productos.id_producto = compras.id_producto AND tiendas.id_tienda = compras.id_tienda GROUP BY tiendas.id_tienda, tiendas.nombre ORDER BY SUM(compras.cantidad) DESC LIMIT 5;";
   $result = $db -> prepare($query);
