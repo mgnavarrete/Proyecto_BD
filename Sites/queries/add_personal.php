@@ -32,7 +32,7 @@
 
 <?php
 	foreach ($personal as $user) {
-		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, oficina WHERE oficina.id_personal = '$user[0]' 
+		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, oficina WHERE oficina.id_personal = $user[0] 
 		AND oficina.unidad = unidades.id AND direcciones.id = unidades.direccion;";
 		$result2 = $db -> prepare($query2);
 		$result2 -> execute();
