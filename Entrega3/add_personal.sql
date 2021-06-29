@@ -22,7 +22,8 @@ BEGIN
         INSERT INTO usuarios values (((SELECT id_usuario FROM usuarios ORDER BY  id_usuario DESC LIMIT 1) + 1), nombre, rut, edad, sexo, 3, 'pass_new' );
         RETURN TRUE;
     
-    ELSE FALSE;
+    ELSE 
+    RETURN FALSE;
     END IF;
 -- -- finalizamos la definición de la función y declaramos el lenguaje
 END
