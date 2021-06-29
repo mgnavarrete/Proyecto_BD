@@ -30,7 +30,7 @@
 
 <?php
 	foreach ($personal as $user) {
-		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, vehiculos, asociaciones, oficina WHERE (oficina.id_personal = $user[0] AND oficina.unidad = unidades.id) OR (asociaciones.id_personal = $user[0] AND asociaciones.id_vehiculo = vehiculos.id AND vehiculos.unidad = unidades.id);";
+		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, vehiculos, asociaciones, oficina WHERE (oficina.id_personal = $user[0] AND oficina.unidad = unidades.id) OR (asociaciones.id_personal = $user[0] AND asociaciones.id_vehiculo = vehiculos.id AND vehiculos.unidad = unidades.id) limit 1;";
 		$result2 = $db -> prepare($query2);
 		$result2 -> execute();
 		$direcciones = $result2 -> fetchAll();
