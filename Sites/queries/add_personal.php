@@ -22,7 +22,7 @@
 		$result2 -> execute();
 		$id_direccion = $result2 -> fetchAll();
 
-		echo "$id_direccion";
+		echo "$id_direccion[0]";
 
 	}
 
