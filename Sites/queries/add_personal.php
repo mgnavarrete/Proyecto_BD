@@ -13,13 +13,16 @@
 	$result -> execute();
 	$personal = $result -> fetchAll();
 
+
+
+
 	foreach ($personal as $user) {
 		$query2 = "SELECT id_direccion FROM tiendas, personal WHERE personal.rut = '$user[1]' AND personal.id_tienda = tiendas.id_tienda;";
-		$result2 = $db2 -> prepare($query);
+		$result2 = $db2 -> prepare($query2);
 		$result2 -> execute();
 		$id_direccion = $result2 -> fetchAll();
 
-		echo "$id_direccion[0]";
+		echo "$id_direccion";
 
 	}
 
