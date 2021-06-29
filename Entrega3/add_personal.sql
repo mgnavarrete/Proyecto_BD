@@ -19,7 +19,7 @@ BEGIN
 
 
     IF rut NOT IN (SELECT rut from usuarios) THEN
-        INSERT INTO usuarios values (((SELECT id_usuario FROM usuarios ORDER BY  id_usuario DESC LIMIT 1) + 1) int , nombre varchar(100), rut varchar(100), edad int, sexo varchar(100), 3, 'pass_new' );
+        INSERT INTO usuarios values (((SELECT id_usuario FROM usuarios ORDER BY  id_usuario DESC LIMIT 1) + 1), nombre, rut, edad, sexo, 3, 'pass_new' );
         RETURN TRUE;
     
     ELSE FALSE;
