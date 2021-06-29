@@ -22,20 +22,21 @@
 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">
     <tr>
       <th>rut1</th>
-	  <th>rut2</th>
+	  <th>id</th>
+	  <th>nombre</th>
       <th>direccion</th>
  
     </tr>
 
 <?php
 	foreach ($personal as $user) {
-		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, oficina,  WHERE oficina.id_personal = $user[0]
-		AND oficina.unidad = unidades.id AND direcciones.id = unidades.direccion;";
+		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, vehiculos, asociaciones, oficina WHERE (oficina.id_personal = $user[0] AND oficina.unidad = unidades.id) OR (asociaciones.id_personal = $user[0] AND asociaciones.id_vehiculo = vehiculos.id AND vehiculos.unidad = unidades.id);";
 		$result2 = $db -> prepare($query2);
 		$result2 -> execute();
-		$direccion = $result2 -> fetchAll();
+		$direcciones = $result2 -> fetchAll();
 
-		echo "<tr> <td>$user[0]</td> <td>$direccion[1]</td> <td>$direccion[2]</td></tr>";
+		foreach ($direcciones as $direccion)
+			echo "<tr> <td>$user[2]</td> <td>$direccion[0]</td> <td>$direccion[2]</td><td>$direccion[3]</td></tr>";
 
 	}
 ?>
