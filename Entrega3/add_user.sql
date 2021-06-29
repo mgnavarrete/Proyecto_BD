@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION
 
 -- declaramos la función y sus argumentos
-add_personal(ruts varchar(100), nombre varchar(100), sexo varchar(100), edad int , id_direccion int)
+add_user(ruts varchar(100), nombre varchar(100), sexo varchar(100), edad int , id_direccion int)
 
 -- declaramos lo que retorna 
 RETURNS BOOLEAN AS $$

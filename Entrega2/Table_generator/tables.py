@@ -44,12 +44,28 @@ def generate_usuarios():
     file  = open('data/usuarios.csv', 'r')
     table = open('db/usuarios.csv', 'w')
     table.write("id_usuario,nombre,rut,edad,sexo,id_direccion\n")
+    ruts = []
+    for line in file:
+        id_usuario, nombre, rut, edad, sexo, id_direccion= line.strip('\n').split(",")
+        if id_usuario == 'id' or rut in ruts:
+            pass
+        else:
+            table.write(f"{id_usuario},{nombre},{rut},{edad},{sexo}\n")
+            ruts.append(rut)
+
+    file.close()
+    table.close()
+
+def generate_usuario_id_direccion():
+    file  = open('data/usuarios.csv', 'r')
+    table = open('db/usuario_direccion.csv', 'w')
+    table.write("id_usuario,id_direccion\n")
     for line in file:
         id_usuario, nombre, rut, edad, sexo, id_direccion= line.strip('\n').split(",")
         if id_usuario == 'id':
             pass
         else:
-            table.write(f"{id_usuario},{nombre},{rut},{edad},{sexo},{id_direccion}\n")
+            table.write(f"{id_usuario},{id_direccion}\n")
     file.close()
     table.close()
 

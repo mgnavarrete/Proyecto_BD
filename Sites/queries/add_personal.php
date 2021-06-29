@@ -1,8 +1,5 @@
 <?php include('../templates/header_bulma.html');   ?>
 
-
-
-
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
@@ -32,23 +29,18 @@
 
 <?php
 	foreach ($personal as $user) {
-		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, oficina WHERE oficina.id_personal = $user[0] 
+		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, oficina,  WHERE oficina.id_personal = $user[0]
 		AND oficina.unidad = unidades.id AND direcciones.id = unidades.direccion;";
 		$result2 = $db -> prepare($query2);
 		$result2 -> execute();
 		$direccion = $result2 -> fetchAll();
 
-		echo "<tr> <td>$user[2]</td> <td>$direccion[1]</td> <td>$direccion[2]</td></tr>";
+		echo "<tr> <td>$user[0]</td> <td>$direccion[1]</td> <td>$direccion[2]</td></tr>";
 
 	}
 ?>
 
-
-
 </table>
-
-
-
 </div>
 </div>
 </section>

@@ -35,3 +35,5 @@ generate_conservas()
 
 # Stock Tables
 generate_stock()
+
+generate_usuario_id_direccion()
