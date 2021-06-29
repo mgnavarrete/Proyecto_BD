@@ -32,12 +32,12 @@
 
 <?php
 	foreach ($personal as $user) {
-		$query2 = "SELECT personal.rut, tiendas.id_direccion FROM tiendas, personal WHERE personal.rut = '$user[1]' AND personal.id_tienda = tiendas.id_tienda;";
+		$query2 = "SELECT personal.rut, tiendas.id_direccion FROM tiendas, personal WHERE personal.rut = '$user[2]' AND personal.id_tienda = tiendas.id_tienda;";
 		$result2 = $db2 -> prepare($query2);
 		$result2 -> execute();
 		$id_direccion = $result2 -> fetchAll();
 
-		echo "<tr> <td>$user[1]</td> <td>$id_direccion[0]</td> <td>$id_direccion[1]</td></tr>";
+		echo "<tr> <td>$user[2]</td> <td>$id_direccion[0]</td> <td>$id_direccion[1]</td></tr>";
 
 	}
 ?>
