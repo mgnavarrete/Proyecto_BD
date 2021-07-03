@@ -10,7 +10,7 @@ RETURNS BOOLEAN AS $$
 
 -- definimos nuestra función
 BEGIN
-        INSERT INTO usuarios_direccion values (id_user, id_direccion);
+        INSERT INTO usuario_direccion values (id_user, id_direccion);
         RETURN TRUE;
     
 
