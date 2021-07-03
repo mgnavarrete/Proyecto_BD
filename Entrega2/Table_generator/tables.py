@@ -43,7 +43,7 @@ def generate_personal():
 def generate_usuarios():
     file  = open('data/usuarios.csv', 'r')
     table = open('db/usuarios.csv', 'w')
-    table.write("id_usuario,nombre,rut,edad,sexo,id_direccion\n")
+    table.write("id_usuario,nombre,rut,edad,sexo\n")
     ruts = []
     for line in file:
         id_usuario, nombre, rut, edad, sexo, id_direccion= line.strip('\n').split(",")
