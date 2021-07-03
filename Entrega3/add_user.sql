@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION
 
 -- declaramos la función y sus argumentos
-add_user(id_user int, ruts varchar(100), nombre varchar(100), sexo varchar(100), edad int)
+add_user(nombre varchar(100),ruts varchar(100), sexo varchar(100), edad int)
 
 -- declaramos lo que retorna 
 RETURNS BOOLEAN AS $$
@@ -19,7 +19,7 @@ BEGIN
 
 
     IF ruts NOT IN (SELECT rut from usuarios) THEN
-        INSERT INTO usuarios values (id_user, nombre, ruts, edad, sexo, 'pass_new' );
+        INSERT INTO usuarios values (((SELECT id_usuario FROM usuarios ORDER BY  id_usuario DESC LIMIT 1) + 1), nombre, ruts, edad, sexo, 'pass_new' );
         RETURN TRUE;
     
     ELSE 
