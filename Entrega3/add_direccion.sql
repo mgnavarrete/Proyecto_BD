@@ -10,7 +10,7 @@ RETURNS BOOLEAN AS $$
 
 -- definimos nuestra función
 BEGIN
-        INSERT INTO direcciones values (((SELECT id_direccion FROM direcciones ORDER BY  id_usuario DESC LIMIT 1) + 1), nombre, comuna);
+        INSERT INTO direcciones values (((SELECT id_direccion FROM direcciones ORDER BY  id_direccion DESC LIMIT 1) + 1), nombre, comuna);
         RETURN TRUE;
     
 
