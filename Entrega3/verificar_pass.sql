@@ -13,6 +13,7 @@ BEGIN
 
     IF old_pass != (SELECT password FROM usuarios WHERE id_user = id_usuarios) THEN
     RETURN TRUE;
+    END IF;
 
     IF new_pass == '' THEN
     RETURN TRUE;
@@ -24,4 +25,5 @@ BEGIN
 
 
 END
+
 $$ language plpgsql
