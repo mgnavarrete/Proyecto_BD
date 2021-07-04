@@ -12,13 +12,13 @@ RETURNS BOOLEAN AS $$
 BEGIN
 
     IF old_pass != (SELECT password FROM usuarios WHERE id_user = id_usuarios) THEN
-    RETURN FALSE;
+    RETURN TRUE;
 
     IF new_pass == '' THEN
-    RETURN FALSE;
+    RETURN TRUE;
 
     ELSE
-    RETURN TRUE;
+    RETURN FALSE;
 
     END IF;
 
