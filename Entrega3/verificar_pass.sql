@@ -11,7 +11,7 @@ RETURNS BOOLEAN AS $$
 -- definimos nuestra función
 BEGIN
 
-    IF old_pass != (SELECT password FROM usuarios WHERE id_user = id_usuarios) THEN
+    IF old_pass != (SELECT password FROM usuarios WHERE id_user = usuarios.id_usuario) THEN
     RETURN TRUE;
     END IF;
 
