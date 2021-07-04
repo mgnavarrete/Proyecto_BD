@@ -13,8 +13,7 @@ BEGIN
 
     IF old_pass != (SELECT password FROM usuarios WHERE id_user = usuarios.id_usuario) THEN
     RETURN TRUE;
-    END IF;
-
+   
     ELSE
     RETURN FALSE;
 
