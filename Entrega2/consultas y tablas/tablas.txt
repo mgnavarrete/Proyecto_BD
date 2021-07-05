@@ -11,6 +11,6 @@
 11. Conservas: id_producto, fecha_exp, metodo.
 12. Stocks: id_producto, id_tienda.
 
-'25696685-9'
+25696685-9
 
 ¡Muy buen trabajo! A continuación les hago algunos comentarios. Ojo en su esquema, las primary keys de sus tablas deben estar indicadas con un underline. Faltó describir la tabla Tiendas_Productos. Su modelación se beneficiaría de una tabla Comunas. Sería bueno también que el atributo dirección de la tabla Tiendas hiciera referencia a una tupla de la tabla Direcciones: la dirección o direcciones de los usuarios ya son obtenibles por otra vía. Estuvo buena la intuición de usar herencia, sin embargo, la modelación podrían mejorar si se agrega una tabla padre de los productos no comestibles, y lo otro, ¿qué tan necesario es contar con un id específico para cada tipo de producto congelado? Lo mismo va para el id específico de los no comestibles, este ¿les ayudó en algo para la consulta 3? En la consulta SQL2 proyectaron demás los atributos de la tienda ubicada en San Joaquín, por lo que se aplica un pequeño descuento. Descuentos: Sube en ruta erronea según rúbrica, issues y anuncios (grupoXX/Entrega1) 

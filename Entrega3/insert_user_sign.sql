@@ -1,13 +1,14 @@
 CREATE OR REPLACE FUNCTION
 
 -- declaramos la función y sus argumentos
-insert_user(nombre varchar(100), ruts varchar(100), edad int, sexo varchar(100) , direccion varchar(100), comuna varchar(100), contraseña varchar(100))
+insert_user_sign(nombre varchar(100), ruts varchar(100), edad int, sexo varchar(100) , direccion varchar(100), comuna varchar(100), contraseña varchar(100))
 
 -- declaramos lo que retorna 
 RETURNS BOOLEAN AS $$
 
 DECLARE
-id_dir int, id_user int;
+id_dir int;
+id_user int;
 
 
 -- definimos nuestra función
