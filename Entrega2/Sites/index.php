@@ -41,14 +41,7 @@
       </p>
       <form align="center" action="consultas/consulta_tienda_pro_tipo.php" method="post">
   
-    <select class="select is-rounded is-info is-large" name="tipo">
-      <?php
-      $tipo_producto = array("No_Comestibles", "Congelagos", "Frescos", "Conservas", "Comestibles");
-      foreach ($tipo_producto as $key) {
-        echo "<option value=$key>$key</option>";
-      }
-      ?>
-    </select>
+    
     <br><br>
     <input class="button is-info is-large" type="submit" value="Buscar por tipo">
   </form>
