@@ -14,7 +14,7 @@ id_user int;
 -- definimos nuestra función
 BEGIN
     SELECT INTO id_dir MAX(id_direccion)+1 FROM direcciones;
-    SELECT INTO id_user MAX(id_user)+1 FROM usuarios;
+    SELECT INTO id_user MAX(id_usuarios)+1 FROM usuarios;
     INSERT INTO usuarios values (id_user, nombre, ruts, edad, sexo, contraseña);
     INSERT INTO direcciones values (id_dir, direccion, comuna);
     INSERT INTO usuario_direccion values (id_user, id_dir);
