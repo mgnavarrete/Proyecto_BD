@@ -21,7 +21,7 @@ BEGIN
     From direcciones WHERE id_direccion = direccion;
 
     -- Verificamos que haya despacho para la dirección
-    IF comuna_a_despacho NOT IN (SELECT tiendas_despacho.comuna_despacho FROM tiendas_despacho Join direcciones On tiendas_despacho.id_direccion = direcciones.id_direccion Where tiendas_despacho.id_tienda = tienda) THEN
+    IF comuna_a_despacho NOT IN (SELECT tiendas_despacho.comuna_despacho FROM tiendas_despacho WHERE tiendas_despacho.id_tienda = tienda) THEN
         RETURN FALSE;
     END IF;
 
