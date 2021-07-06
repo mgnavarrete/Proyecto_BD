@@ -9,6 +9,7 @@ RETURNS BOOLEAN AS $$
 -- declaramos las variables a utilizar si es que es necesario
 DECLARE
 compra_anterior int;
+comuna varchar;
 
 
 -- definimos nuestra función
