@@ -9,14 +9,14 @@ RETURNS BOOLEAN AS $$
 -- declaramos las variables a utilizar si es que es necesario
 DECLARE
 compra_anterior int;
-comuna varchar;
+comuna varchar(100);
 
 
 -- definimos nuestra función
 BEGIN
 
     -- Buscamos la comuna del usuario
-    INSERT INTO comuna_a_despacho
+    SELECT INTO comuna_a_despacho
     comuna
     From direcciones WHERE id_direccion = direccion;
 
