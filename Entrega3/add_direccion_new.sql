@@ -15,7 +15,7 @@ BEGIN
         
         SELECT INTO id_dir MAX(id_direccion)+1 FROM direcciones;
         INSERT INTO direcciones values (is_dir, nombre, comuna);
-        INSERT INTO usuario_direccion values (id_user, id_dire);
+        INSERT INTO usuario_direccion values (id_user, id_dir);
         RETURN TRUE;
     
 
