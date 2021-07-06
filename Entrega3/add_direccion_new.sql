@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION
 
 -- declaramos la función y sus argumentos
-add_direccion(id_user int, nombre varchar(100), comuna varchar(100))
+add_direccion_new(id_user int, nombre varchar(100), comuna varchar(100))
 
 -- declaramos lo que retorna 
 RETURNS BOOLEAN AS $$
