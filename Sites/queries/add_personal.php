@@ -9,8 +9,49 @@
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$personal = $result -> fetchAll();
-
 	?>
+
+
+<?php
+	foreach ($personal as $user) {
+		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM personal_unidad, unidades, direcciones WHERE personal_unidad.id_personal = $user[0] AND unidades.id = personal_unidad.id_unidad AND unidades.direccion = direcciones.id;";
+		$result2 = $db -> prepare($query2);
+		$result2 -> execute();
+		$direcciones = $result2 -> fetchAll();
+
+		$add_user = "SELECT add_user('$user[1]'::varchar, '$user[2]'::varchar, '$user[3]'::varchar, $user[4]);";
+		$result5 = $db2 -> prepare($add_user);
+        $result5 -> execute();
+        $result5 -> fetchAll();
+
+
+		foreach ($direcciones as $direccion)
+
+			$add_direccion = "SELECT add_direccion('$direccion[1]'::varchar, '$direccion[2]'::varchar);";
+			$result6 = $db2 -> prepare($add_direccion);
+        	$result6 -> execute();
+        	$result6 -> fetchAll();
+
+			$query_id_u = "SELECT usuarios.id_usuario FROM usuarios WHERE usuarios.rut = '$user[2]';";
+			$result = $db2 -> prepare($query_id_u);
+			$result -> execute();
+			$id_u = $result -> fetch();
+
+			$query_id_d = "SELECT direcciones.id_direccion FROM direcciones WHERE direcciones.nombre_direccion = '$direccion[1]';";
+			$result = $db2 -> prepare($query_id_d);
+			$result -> execute();
+			$id_d = $result -> fetch();
+
+
+			$add_user_direccion = "SELECT add_user_direccion($id_u[0], $id_d[0]);";
+			$result7 = $db2 -> prepare($add_user_direccion);
+        	$result7 -> execute();
+        	$result7 -> fetchAll();
+				
+			
+
+	}
+?>
 
 <section class="hero is-info is-fullheight">
   <div class="hero-body">
@@ -21,25 +62,28 @@
 
 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" align="center">
     <tr>
-      <th>rut1</th>
-	  <th>id</th>
+      <th>id</th>
 	  <th>nombre</th>
-      <th>direccion</th>
+	  <th>rut</th>
+      <th>edad</th>
+	  <th>sexo</th>
+	  <th>pass</th>
  
     </tr>
 
-<?php
-	foreach ($personal as $user) {
-		$query2 = "SELECT direcciones.id, direcciones.nombre, direcciones.comuna FROM direcciones, unidades, vehiculos, asociaciones, oficina WHERE (oficina.id_personal = $user[0] AND oficina.unidad = unidades.id) OR (asociaciones.id_personal = $user[0] AND asociaciones.id_vehiculo = vehiculos.id AND vehiculos.unidad = unidades.id) limit 1;";
-		$result2 = $db -> prepare($query2);
-		$result2 -> execute();
-		$direcciones = $result2 -> fetchAll();
+	<?php
+	$query20 = "SELECT * FROM usuarios ORDER BY  usuarios.id_usuario DESC;";
+	$result = $db2 -> prepare($query20);
+	$result -> execute();
+	$usuarios = $result -> fetchAll();
 
-		foreach ($direcciones as $direccion)
-			echo "<tr> <td>$user[2]</td> <td>$direccion[0]</td> <td>$direccion[2]</td><td>$direccion[3]</td></tr>";
+	foreach ($usuarios as $u){
+			
+		echo "<tr> <td>$u[0]</td> <td>$u[1]</td> <td>$u[2]</td> <td>$u[3]</td> <td>$u[4]</td> <td>$u[5]</td></tr>";
+  }
+  ?>
 
-	}
-?>
+
 
 </table>
 </div>
